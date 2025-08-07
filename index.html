@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS/Android アプリ開発者 | Portfolio</title>
+    <meta name="description" content="iOS/Androidアプリ開発専門のフリーランスエンジニア。Swift、Flutter、React Nativeを使用したモバイルアプリ開発を得意としています。">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#apps" class="nav-link">Apps</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">iOS/Android</span><br>
+                    アプリ開発専門
+                </h1>
+                <p class="hero-subtitle">
+                    ユーザー体験を重視した、美しく使いやすいモバイルアプリを制作します
+                </p>
+                <div class="hero-buttons">
+                    <a href="#apps" class="btn btn-primary">作品を見る</a>
+                    <a href="#contact" class="btn btn-secondary">お問い合わせ</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-preview"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>モバイルアプリ開発に特化したフリーランスエンジニア</h3>
+                    <p>
+                        iOS/Androidアプリ開発を専門とし、ユーザー体験を最優先に考えたアプリ制作を行っています。
+                        デザインから実装まで一貫して対応し、クライアントのビジョンを形にします。
+                    </p>
+                    <div class="work-style">
+                        <h4>開発スタイル</h4>
+                        <ul>
+                            <li>✅ ユーザー体験を重視したUI/UX設計</li>
+                            <li>✅ 最新技術を活用した高性能な実装</li>
+                            <li>✅ 保守性を考慮したクリーンなコード</li>
+                            <li>✅ 迅速なレスポンスと丁寧なコミュニケーション</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="team-photo-container">
+                        <div class="team-photo">
+                            <!-- 1枚の写真を分割して使用 -->
+                            <img src="team-photo.jpg" alt="チーム写真" class="team-photo-main">
+                            <div class="photo-left" data-person="left">
+                                <div class="person-overlay">
+                                    <div class="person-info">
+                                        <h4>ともや</h4>
+                                        <p>iOS/Android開発専門</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="photo-right" data-person="right">
+                                <div class="person-overlay">
+                                    <div class="person-info">
+                                        <h4>せいや</h4>
+                                        <p>UI/UXデザイン専門</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps Section -->
+    <section id="apps" class="apps">
+        <div class="container">
+            <h2 class="section-title">制作アプリ</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-preview">
+                        <div class="app-screenshot">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>アプリ1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-info">
+                        <h3>アプリ名1</h3>
+                        <p>生活を便利にするユーティリティアプリ</p>
+                        <div class="app-tech">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">UIKit</span>
+                        </div>
+                        <div class="app-status">
+                            <span class="status-badge development">開発中</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <div class="app-preview">
+                        <div class="app-screenshot">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>アプリ2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-info">
+                        <h3>アプリ名2</h3>
+                        <p>エンターテイメント系アプリ</p>
+                        <div class="app-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                        </div>
+                        <div class="app-status">
+                            <span class="status-badge development">開発中</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-card coming-soon">
+                    <div class="app-preview">
+                        <div class="app-screenshot">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-plus"></i>
+                                <span>Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-info">
+                        <h3>新しいプロジェクト</h3>
+                        <p>次回作のアプリ</p>
+                        <div class="app-tech">
+                            <span class="tech-tag">React Native</span>
+                        </div>
+                        <div class="app-status">
+                            <span class="status-badge planning">企画中</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">技術スキル</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>モバイル開発</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-swift"></i>
+                            <span>Swift</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-android"></i>
+                            <span>Android</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React Native</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Expo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Web開発</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>開発ツール・ライブラリ</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>デザイン・ツール</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-adobe"></i>
+                            <span>Adobe XD</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Chart Kit</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>React Native Calendars</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>得意分野</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>UI/UX設計</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>パフォーマンス最適化</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>セキュリティ</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>バックエンド連携</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">お問い合わせ</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>プロジェクトのご相談</h3>
+                    <p>
+                        iOS/Androidアプリ開発のご相談を承っています。
+                        お気軽にお問い合わせください。
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>メールでのお問い合わせ</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter DM</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="お名前" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="プロジェクトの詳細をお聞かせください" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">送信する</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">AppDev</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#apps">Apps</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AppDev. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
