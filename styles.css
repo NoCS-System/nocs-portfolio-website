@@ -65,11 +65,11 @@ body {
 }
 
 /* ロゴ画像が存在する場合のスタイル */
-.nav-logo:has(.logo-image[src*="nocs-logo.png"]) .logo-image {
+.nav-logo:has(.logo-image[src*="NoCS_logo.png"]) .logo-image {
     display: block;
 }
 
-.nav-logo:has(.logo-image[src*="nocs-logo.png"]) .logo-text {
+.nav-logo:has(.logo-image[src*="NoCS_logo.png"]) .logo-text {
     display: none;
 }
 
