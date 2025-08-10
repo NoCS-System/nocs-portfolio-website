@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サポート - FaiVE App | NoCS AppDev</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .support-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 40px 20px;
+        }
+        .support-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .support-section h2 {
+            color: #168aff;
+            border-bottom: 2px solid #168aff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .support-section h3 {
+            color: #333;
+            margin: 20px 0 10px 0;
+        }
+        .back-button {
+            display: inline-block;
+            background: #168aff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
+        .contact-form {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #333;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #168aff;
+            box-shadow: 0 0 0 2px rgba(22, 138, 255, 0.1);
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: #168aff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #168aff;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+        }
+        .highlight-box {
+            background: #e3f2fd;
+            border: 1px solid #168aff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .highlight-box h4 {
+            color: #168aff;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-text">NoCS AppDev</div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#apps" class="nav-link">Apps</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="support-content">
+            <a href="faive-detail.html" class="back-button">← FaiVE詳細に戻る</a>
+            
+            <div class="support-section">
+                <h1>FaiVE サポートセンター</h1>
+                <p>FaiVEアプリに関するご質問やサポートが必要な場合は、お気軽にお問い合わせください。</p>
+            </div>
+
+            <div class="support-section">
+                <h2>よくある質問（FAQ）</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: FaiVEアプリの使い方を教えてください</div>
+                    <div class="faq-answer">
+                        A: FaiVEは5秒で日記を書けるシンプルなアプリです。感情レベルを選択し、日記の内容を入力するだけで、AIがあなたの気持ちに寄り添った返信を生成します。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 日記データはどこに保存されますか？</div>
+                    <div class="faq-answer">
+                        A: 日記データはお使いのデバイス内（ローカルストレージ）に保存されます。また、iCloud等のクラウドサービスとの同期も可能です。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: AIの返信はどのように生成されますか？</div>
+                    <div class="faq-answer">
+                        A: GoogleのGemini APIを使用して、あなたの日記内容と感情データを分析し、適切な返信を生成します。個人を特定できる情報は含まれません。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: プライバシーは保護されていますか？</div>
+                    <div class="faq-answer">
+                        A: はい、ユーザーのプライバシーを最優先に考えています。詳細は<a href="privacy-policy.html">プライバシーポリシー</a>をご確認ください。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: アプリがクラッシュする場合の対処法</div>
+                    <div class="faq-answer">
+                        A: アプリを再起動するか、デバイスを再起動してください。問題が続く場合は、お問い合わせフォームからご連絡ください。
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-section">
+                <h2>お問い合わせ</h2>
+                <p>上記のFAQで解決しない場合は、以下のフォームからお問い合わせください。</p>
+                
+                <div class="contact-form">
+                    <form action="#" method="POST" id="supportForm">
+                        <div class="form-group">
+                            <label for="name">お名前 *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">メールアドレス *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">件名 *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">選択してください</option>
+                                <option value="bug">バグ報告</option>
+                                <option value="feature">機能要望</option>
+                                <option value="usage">使い方について</option>
+                                <option value="privacy">プライバシーについて</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 *</label>
+                            <textarea id="message" name="message" placeholder="詳細をお聞かせください" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">送信する</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="support-section">
+                <h2>その他のサポート情報</h2>
+                
+                <div class="highlight-box">
+                    <h4>📱 アプリ情報</h4>
+                    <p><strong>アプリ名:</strong> FaiVE - 5秒で日記アプリ</p>
+                    <p><strong>バージョン:</strong> 1.0.0</p>
+                    <p><strong>対応OS:</strong> iOS 14.0以上、Android 8.0以上</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>🔗 関連リンク</h4>
+                    <p><a href="privacy-policy.html">プライバシーポリシー</a></p>
+                    <p><a href="faive-detail.html">FaiVE詳細ページ</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-text">NoCS AppDev</div>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#apps">Apps</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <a href="support.html">サポート</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NoCS AppDev. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // サポートフォームの処理
+        document.getElementById('supportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // フォームデータの取得
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // 簡単なバリデーション
+            if (!name || !email || !subject || !message) {
+                alert('すべての項目を入力してください。');
+                return;
+            }
+            
+            // 送信完了メッセージ（実際の送信処理は実装が必要）
+            alert('お問い合わせありがとうございます。\n内容を確認次第、ご連絡いたします。');
+            
+            // フォームをリセット
+            this.reset();
+        });
+    </script>
+</body>
+</html>
