@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サポート・よくある質問 - ユメミルAI | NoCS AppDev</title>
+    <meta name="description" content="ユメミルAIアプリのサポートページ・よくある質問">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .support-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .support-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .support-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .support-header p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .support-content {
+            line-height: 1.8;
+        }
+
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+
+        .faq-section h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .faq-answer ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .important-notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .important-notice h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .important-notice p {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: #1565c0;
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-links {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .legal-links h4 {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .legal-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .support-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .support-header h1 {
+                font-size: 2rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#apps" class="nav-link">Apps</a>
+                <a href="../index.html#skills" class="nav-link">Skills</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="yumemiruAI-detail.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        ユメミルAI詳細に戻る
+    </a>
+
+    <div class="support-container">
+        <div class="support-header">
+            <h1>サポート・よくある質問（FAQ）</h1>
+            <p><strong>アプリ名:</strong> ユメミルAI - AIが夢を解釈！悩み相談もできる夢占いアプリ</p>
+            <p><strong>最終更新日:</strong> 2024年12月19日</p>
+        </div>
+
+        <div class="support-content">
+            <div class="faq-section">
+                <h2><i class="fas fa-mobile-alt"></i> アプリの使い方</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: アプリの基本的な使い方を教えてください</div>
+                    <div class="faq-answer">
+                        A: ユメミルAIは、夢を記録してAIが解釈してくれる夢占いアプリです。
+                        <ul>
+                            <li>夢の内容を記録</li>
+                            <li>感情レベル（1-10）を設定</li>
+                            <li>タグを選択</li>
+                            <li>AI解釈を生成</li>
+                            <li>カレンダーで管理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 初回起動時の設定は必要ですか？</div>
+                    <div class="faq-answer">
+                        A: 初回起動時は、年齢確認と基本的な設定を行います。13歳未満の方は保護者の同意が必要です。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: オフラインでも使えますか？</div>
+                    <div class="faq-answer">
+                        A: 基本的な機能（夢の記録・管理）はオフラインでも使用可能です。AI解釈生成にはインターネット接続が必要です。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2><i class="fas fa-robot"></i> AI解釈について</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: AI解釈はどのくらいの精度ですか？</div>
+                    <div class="faq-answer">
+                        A: AI解釈は占い・参考程度のサービスです。医療・心理学的な診断ではありません。人生の重要な決定の根拠として使用しないでください。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: AI解釈の生成に時間がかかります</div>
+                    <div class="faq-answer">
+                        A: 通常1-3分程度で生成されます。ネットワーク状況やAIサーバーの負荷によって時間が変動する場合があります。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: AI解釈が生成できない場合</div>
+                    <div class="faq-answer">
+                        A: ネットワーク接続を確認してください。問題が続く場合は、アプリ内の設定画面からお問い合わせください。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2><i class="fas fa-crown"></i> 課金・プレミアム機能</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: プレミアム機能とは何ですか？</div>
+                    <div class="faq-answer">
+                        A: プレミアム機能では以下のサービスが利用できます：
+                        <ul>
+                            <li>広告非表示</li>
+                            <li>無制限のAI解釈</li>
+                            <li>追加機能へのアクセス</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 課金プランは何がありますか？</div>
+                    <div class="faq-answer">
+                        A: 以下の3つのプランがあります：
+                        <ul>
+                            <li>月額480円</li>
+                            <li>年額3,600円（25%割引）</li>
+                            <li>ライフタイム9,800円</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 課金の返金は可能ですか？</div>
+                    <div class="faq-answer">
+                        A: 返金はApple App Storeの返金ポリシーに準拠します。詳細はAppleサポートにお問い合わせください。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2><i class="fas fa-shield-alt"></i> プライバシー・セキュリティ</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: 私の夢の内容は保存されますか？</div>
+                    <div class="faq-answer">
+                        A: 全てのデータはデバイス内のローカルストレージに保存されます。クラウドへの自動同期は行いません。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: データのバックアップは可能ですか？</div>
+                    <div class="faq-answer">
+                        A: 現在、自動バックアップ機能はありません。データの保護のため、定期的にアプリの更新を行ってください。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: アプリを削除した場合、データはどうなりますか？</div>
+                    <div class="faq-answer">
+                        A: アプリを削除すると、全てのデータは完全に削除されます。復元はできません。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2><i class="fas fa-music"></i> BGM・サウンド</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: BGMは変更できますか？</div>
+                    <div class="faq-answer">
+                        A: 設定画面からBGMの音量調整が可能です。現在は「mystical_bgm.mp3」が標準で搭載されています。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: サウンドが鳴らない場合</div>
+                    <div class="faq-answer">
+                        A: デバイスの音量設定とアプリ内の音量設定を確認してください。また、サイレントモードが有効になっていないか確認してください。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2><i class="fas fa-calendar-alt"></i> カレンダー・管理機能</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: 夢の記録は何件まで保存できますか？</div>
+                    <div class="faq-answer">
+                        A: デバイスの容量に依存しますが、通常数千件の記録が可能です。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 夢の記録を編集・削除できますか？</div>
+                    <div class="faq-answer">
+                        A: はい、記録した夢は編集・削除が可能です。カレンダー画面から該当の記録を選択してください。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: タグの追加・変更は可能ですか？</div>
+                    <div class="faq-answer">
+                        A: 現在、事前に設定されたタグから選択する形式です。カスタムタグの追加機能は今後のアップデートで予定しています。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2><i class="fas fa-tools"></i> トラブルシューティング</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: アプリが起動しない</div>
+                    <div class="faq-answer">
+                        A: 以下の手順を試してください：
+                        <ul>
+                            <li>アプリを完全に終了して再起動</li>
+                            <li>デバイスの再起動</li>
+                            <li>アプリの再インストール</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: AI解釈が生成されない</div>
+                    <div class="faq-answer">
+                        A: 以下の点を確認してください：
+                        <ul>
+                            <li>インターネット接続</li>
+                            <li>夢の内容が入力されているか</li>
+                            <li>アプリの再起動</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: データが消えた</div>
+                    <div class="faq-answer">
+                        A: アプリの更新や再インストールを行った場合、データが消える可能性があります。重要なデータは事前にメモしておくことをお勧めします。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2><i class="fas fa-headset"></i> お問い合わせ・サポート</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: バグを報告したい</div>
+                    <div class="faq-answer">
+                        A: アプリ内の設定画面からお問い合わせください。詳細な状況をお聞かせください。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 新機能のリクエストは可能ですか？</div>
+                    <div class="faq-answer">
+                        A: はい、アプリ内の設定画面からご要望をお聞かせください。今後のアップデートで検討いたします。
+                    </div>
+                </div>
+            </div>
+
+            <div class="important-notice">
+                <h3><i class="fas fa-exclamation-triangle"></i> 重要な注意事項</h3>
+                <p><strong>本アプリは、夢の解釈や悩み相談の結果について、医学的・心理学的な診断や治療を提供するものではありません。</strong></p>
+                <p>AIによる分析結果は参考情報であり、専門家のアドバイスに代わるものではありません。重要な判断や医療的な問題がある場合は、必ず専門家にご相談ください。</p>
+            </div>
+
+            <div class="contact-info">
+                <h3><i class="fas fa-envelope"></i> お問い合わせ</h3>
+                <p>アプリ内の設定画面からお問い合わせください。</p>
+                <p>バグの報告や新機能のリクエストも承っております。</p>
+            </div>
+
+            <div class="legal-links">
+                <h4>関連ページ</h4>
+                <a href="privacy-policy.html">プライバシーポリシー</a> | 
+                <a href="terms-of-service.html">利用規約</a> | 
+                <a href="yumemiruAI-detail.html">ユメミルAI詳細</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
