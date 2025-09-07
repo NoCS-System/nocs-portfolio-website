@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ととのい -Totonoi- | NoCS AppDev</title>
+    <meta name="description" content="ととのい -Totonoi- アプリの詳細情報">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .app-icon-large {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .coming-soon-section {
+            padding: 4rem 0;
+            text-align: center;
+            background: #f8f9fa;
+        }
+
+        .coming-soon-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .coming-soon-icon {
+            font-size: 4rem;
+            color: #667eea;
+            margin-bottom: 2rem;
+        }
+
+        .coming-soon-content h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon-content p {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .app-info {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f0f0f0;
+        }
+
+        .info-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .info-card ul {
+            margin-left: 1.5rem;
+            color: #666;
+        }
+
+        .info-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .legal-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+
+        .legal-section h4 {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .legal-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+
+            .app-icon-large {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .coming-soon-content h2 {
+                font-size: 2rem;
+            }
+
+            .legal-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#apps" class="nav-link">Apps</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="index.html#apps" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        アプリ一覧に戻る
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="app-icon-large">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h1>ととのい -Totonoi-</h1>
+                <p>リラクゼーション用BGM再生アプリ</p>
+                <div class="status-badge">
+                    <i class="fas fa-clock"></i>
+                    開発中 - Coming Soon
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon-section">
+        <div class="coming-soon-content">
+            <div class="coming-soon-icon">
+                <i class="fas fa-hourglass-half"></i>
+            </div>
+            <h2>Coming Soon</h2>
+            <p>「ととのい -Totonoi-」は現在開発中です。<br>
+            リラクゼーション用BGM再生アプリとして、<br>
+            心を落ち着かせる音楽体験をお届けします。</p>
+            <p>詳細な情報やスクリーンショットは<br>
+            準備ができ次第、こちらに掲載いたします。</p>
+        </div>
+    </section>
+
+    <!-- App Info Section -->
+    <section class="app-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-info-circle"></i> アプリ概要</h3>
+                    <p>「ととのい -Totonoi-」は、日常の疲れを癒し、心を整えるためのリラクゼーション用BGM再生アプリです。</p>
+                    <p>美しい音楽と共に、忙しい現代人にとっての「ととのい」の時間を提供します。</p>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-star"></i> 主な機能</h3>
+                    <ul>
+                        <li>高品質なリラクゼーションBGM再生</li>
+                        <li>カスタマイズ可能な音楽プレイリスト</li>
+                        <li>タイマー機能付き再生</li>
+                        <li>オフライン再生対応</li>
+                        <li>美しいUIデザイン</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-cog"></i> 技術仕様</h3>
+                    <p><strong>プラットフォーム:</strong> iOS / Android</p>
+                    <p><strong>開発言語:</strong> React Native</p>
+                    <p><strong>フレームワーク:</strong> Expo</p>
+                    <p><strong>音楽再生:</strong> ネイティブオーディオエンジン</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Expo</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Audio</span>
+                        <span class="tech-tag">iOS</span>
+                        <span class="tech-tag">Android</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-chart-line"></i> 開発状況</h3>
+                    <p><strong>ステータス:</strong> 開発中</p>
+                    <p><strong>進捗:</strong> 準備段階</p>
+                    <p><strong>リリース予定:</strong> 2025年</p>
+                    <p>現在、アプリの基本機能の開発を進めております。詳細な情報は随時更新いたします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Documents Section -->
+    <section class="legal-section">
+        <div class="container">
+            <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                <h4 style="margin-bottom: 1rem; color: #666;">法的文書</h4>
+                <div class="legal-buttons">
+                    <a href="totonoi/privacy-policy.html" class="btn btn-secondary">
+                        <i class="fas fa-shield-alt"></i>
+                        プライバシーポリシー
+                    </a>
+                    <a href="totonoi/terms-of-service.html" class="btn btn-secondary">
+                        <i class="fas fa-file-contract"></i>
+                        利用規約
+                    </a>
+                </div>
+                <p style="margin-top: 1rem; color: #999; font-size: 0.9rem;">
+                    プライバシーポリシーと利用規約は日本語・英語・フィンランド語でご確認いただけます。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

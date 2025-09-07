@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - ととのい -Totonoi- | NoCS AppDev</title>
+    <meta name="description" content="ととのい -Totonoi- アプリのプライバシーポリシー">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .policy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .policy-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .policy-header p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-content {
+            line-height: 1.8;
+        }
+
+        .policy-section {
+            margin-bottom: 2rem;
+        }
+
+        .policy-section h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .policy-section p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section li {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .language-selector {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .language-selector h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .language-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .legal-links {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .legal-links h4 {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .legal-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .policy-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .policy-header h1 {
+                font-size: 2rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .language-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#apps" class="nav-link">Apps</a>
+                <a href="../index.html#skills" class="nav-link">Skills</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="totonoi-detail.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        ととのい詳細に戻る
+    </a>
+
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1>プライバシーポリシー</h1>
+            <p><strong>アプリ名:</strong> ととのい -Totonoi-</p>
+            <p><strong>最終更新日:</strong> 2025年9月6日</p>
+            <p><strong>運営者:</strong> NoCS system</p>
+            <p><strong>連絡先:</strong> nocs.information@gmail.com</p>
+        </div>
+
+        <div class="language-selector">
+            <h3><i class="fas fa-globe"></i> 言語選択 / Language Selection / Kielen valinta</h3>
+            <div class="language-buttons">
+                <a href="#japanese" class="lang-btn active" onclick="showLanguage('japanese')">日本語</a>
+                <a href="#english" class="lang-btn" onclick="showLanguage('english')">English</a>
+                <a href="#finnish" class="lang-btn" onclick="showLanguage('finnish')">Suomi</a>
+            </div>
+        </div>
+
+        <div class="policy-content">
+            <!-- Japanese Version -->
+            <div id="japanese" class="language-content">
+                <div class="policy-section">
+                    <h2>1. 収集する情報</h2>
+                    <ul>
+                        <li><strong>購入情報：</strong>App Storeの購読・購入状態（領収・有効期限など）を端末内に保持</li>
+                        <li><strong>端末情報：</strong>機能提供に必要な最小限の識別子（OSバージョン等）</li>
+                        <li><strong>ログ/クラッシュ情報：</strong>品質改善のためにOS標準機能経由で取得される可能性</li>
+                        <li><strong>本アプリはアナリティクス/広告トラッキングを行いません。位置情報・連絡先・写真等の個人データを収集しません。</strong></li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>2. 利用目的</h2>
+                    <ul>
+                        <li>サブスクリプション等の有料機能提供、購入の復元</li>
+                        <li>動作の安定化、サポート対応</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>3. 第三者提供</h2>
+                    <ul>
+                        <li>決済はAppleを通じて行われます（Appleのプライバシーポリシーに従います）。</li>
+                        <li>法令要請がある場合を除き、個人データを第三者に販売・共有しません。</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>4. データの保存と安全管理</h2>
+                    <ul>
+                        <li>端末内またはAppleの仕組みで管理され、必要最小限の期間のみ保持します。</li>
+                        <li>合理的な安全対策を講じます。</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>5. EU/EEA（GDPR）に関する情報</h2>
+                    <ul>
+                        <li>取得データは個人を直接特定できない範囲に限定されます。</li>
+                        <li>利用者はアクセス・訂正・消去・処理の制限・異議申立て等の権利を有します。請求は「連絡先」まで。</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>6. 未成年者</h2>
+                    <ul>
+                        <li>13歳未満の利用者の個人データを意図的に収集しません。</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>7. 変更</h2>
+                    <ul>
+                        <li>本ポリシーを改定する場合は本ページで告知します。</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>8. お問い合わせ</h2>
+                    <p><strong>連絡先：</strong>nocs.information@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- English Version -->
+            <div id="english" class="language-content" style="display: none;">
+                <div class="policy-section">
+                    <h2>1. Data Collected</h2>
+                    <ul>
+                        <li><strong>Subscription/purchase status</strong> (stored on device)</li>
+                        <li><strong>Minimal device/OS info</strong> for functionality</li>
+                        <li><strong>System crash/logs</strong> when provided by the OS</li>
+                        <li><strong>No analytics, no ad tracking; no access to location/contacts/photos.</strong></li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>2. Use of Data</h2>
+                    <ul>
+                        <li>Provide paid features and restore purchases</li>
+                        <li>Stability and support</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>3. Third Parties</h2>
+                    <ul>
+                        <li>Payments are processed by Apple (their policies apply).</li>
+                        <li>No selling or sharing of personal data, except when required by law.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>4. Storage & Security</h2>
+                    <ul>
+                        <li>Stored locally and/or via Apple mechanisms for the minimum necessary period with reasonable safeguards.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>5. GDPR</h2>
+                    <ul>
+                        <li>Data is non-directly identifiable. You may exercise access/rectification/erasure/restriction/objection rights via the contact above.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>6. Children</h2>
+                    <ul>
+                        <li>We do not knowingly collect data from children under 13.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>7. Changes</h2>
+                    <ul>
+                        <li>Updates will be posted here.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>8. Contact</h2>
+                    <p><strong>Contact:</strong>nocs.information@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Finnish Version -->
+            <div id="finnish" class="language-content" style="display: none;">
+                <div class="policy-section">
+                    <h2>1. Kerättävät tiedot</h2>
+                    <ul>
+                        <li><strong>Ostotila</strong> (laitteessa)</li>
+                        <li><strong>Vähäiset laite/OS‑tiedot</strong></li>
+                        <li><strong>Järjestelmän lokit/crash</strong> (mahdollisesti)</li>
+                        <li><strong>Ei analytiikkaa eikä mainosseurantaa.</strong></li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>2. Käyttötarkoitus</h2>
+                    <ul>
+                        <li>Maksulliset toiminnot ja ostojen palautus</li>
+                        <li>Vakaus ja tuki</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>3. Kolmannet osapuolet</h2>
+                    <ul>
+                        <li>Maksut Apple (heidän käytännöt).</li>
+                        <li>Ei tietojen myyntiä/jakamista, ellei laki vaadi.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>4. Säilytys ja turvallisuus</h2>
+                    <ul>
+                        <li>Vähimmäisaika, kohtuulliset suojaukset, paikallisesti ja/tai Applen kautta.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>5. GDPR</h2>
+                    <ul>
+                        <li>Oikeus tarkastaa/korjata/poistaa/rajoittaa/vastustaa; ota yhteyttä yllä olevaan osoitteeseen.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>6. Alaikäiset</h2>
+                    <ul>
+                        <li>Ei tietojen keruuta alle 13‑vuotiailta.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>7. Muutokset</h2>
+                    <ul>
+                        <li>Ilmoitetaan tällä sivulla.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2>8. Yhteys</h2>
+                    <p><strong>Yhteys:</strong>nocs.information@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="legal-links">
+                <h4>関連ページ</h4>
+                <a href="terms-of-service.html">利用規約</a> | 
+                <a href="totonoi-detail.html">ととのい詳細</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLanguage(lang) {
+            // Hide all language contents
+            const contents = document.querySelectorAll('.language-content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            // Show selected language content
+            document.getElementById(lang).style.display = 'block';
+            
+            // Update active button
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

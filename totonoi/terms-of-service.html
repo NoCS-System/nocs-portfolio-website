@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用規約 - ととのい -Totonoi- | NoCS AppDev</title>
+    <meta name="description" content="ととのい -Totonoi- アプリの利用規約">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .terms-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .terms-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .terms-header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .terms-header p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .terms-content {
+            line-height: 1.8;
+        }
+
+        .terms-section {
+            margin-bottom: 2rem;
+        }
+
+        .terms-section h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .terms-section p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section li {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .language-selector {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .language-selector h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .language-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .legal-links {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .legal-links h4 {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .legal-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .terms-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .terms-header h1 {
+                font-size: 2rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .language-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#apps" class="nav-link">Apps</a>
+                <a href="../index.html#skills" class="nav-link">Skills</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="totonoi-detail.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        ととのい詳細に戻る
+    </a>
+
+    <div class="terms-container">
+        <div class="terms-header">
+            <h1>利用規約</h1>
+            <p><strong>アプリ名:</strong> ととのい -Totonoi-</p>
+            <p><strong>最終更新日:</strong> 2025年9月6日</p>
+            <p><strong>運営者:</strong> NoCS system</p>
+        </div>
+
+        <div class="language-selector">
+            <h3><i class="fas fa-globe"></i> 言語選択 / Language Selection / Kielen valinta</h3>
+            <div class="language-buttons">
+                <a href="#japanese" class="lang-btn active" onclick="showLanguage('japanese')">日本語</a>
+                <a href="#english" class="lang-btn" onclick="showLanguage('english')">English</a>
+                <a href="#finnish" class="lang-btn" onclick="showLanguage('finnish')">Suomi</a>
+            </div>
+        </div>
+
+        <div class="terms-content">
+            <!-- Japanese Version -->
+            <div id="japanese" class="language-content">
+                <div class="terms-section">
+                    <h2>1. 目的</h2>
+                    <ul>
+                        <li>本アプリはリラクゼーション用BGM再生等の機能を提供します。</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>2. ライセンス</h2>
+                    <ul>
+                        <li>個人利用の範囲で非独占的に利用できます。再配布・複製・改変・商用利用は禁止（明示の許諾がある場合を除く）。</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>3. 有料機能/サブスクリプション</h2>
+                    <ul>
+                        <li>価格は地域により異なります。Apple IDに請求され、期間終了前24時間以内に自動更新されます。</li>
+                        <li>管理/解約：設定＞Apple ID＞サブスクリプション。購入の復元はアプリ内ボタンで可能。</li>
+                        <li>返金はAppleのポリシーに従います。</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>4. 禁止事項</h2>
+                    <ul>
+                        <li>法令/公序良俗違反、逆コンパイル等のリバースエンジニアリング、サービス妨害行為 等。</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>5. 免責</h2>
+                    <ul>
+                        <li>本アプリの利用により生じた損害について、運営者は故意または重過失を除き責任を負いません。機能は予告なく変更/停止する場合があります。</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>6. 知的財産</h2>
+                    <ul>
+                        <li>アプリ/コンテンツの権利は運営者または各権利者に帰属します。</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>7. 準拠法/裁判管轄</h2>
+                    <ul>
+                        <li>日本法。管轄は運営者所在地を管轄する裁判所。</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>8. 連絡先</h2>
+                    <p><strong>連絡先：</strong>nocs.information@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- English Version -->
+            <div id="english" class="language-content" style="display: none;">
+                <div class="terms-section">
+                    <h2>1. Purpose</h2>
+                    <ul>
+                        <li>Relaxation BGM and related features.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>2. License</h2>
+                    <ul>
+                        <li>Personal, non-exclusive use only. No redistribution, modification, or commercial use without permission.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>3. Subscriptions</h2>
+                    <ul>
+                        <li>Pricing varies by region. Charged to your Apple ID; auto-renews unless canceled at least 24 hours before renewal.</li>
+                        <li>Manage/Cancel: Settings > Apple ID > Subscriptions. "Restore Purchases" available in-app.</li>
+                        <li>Refunds follow Apple policy.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>4. Prohibited Conduct</h2>
+                    <ul>
+                        <li>Violations of law/public order, reverse engineering, service disruption, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>5. Disclaimer</h2>
+                    <ul>
+                        <li>No liability for damages except in cases of willful misconduct or gross negligence. Features may change or stop without notice.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>6. IP Rights</h2>
+                    <ul>
+                        <li>All rights belong to NoCS system or respective right holders.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>7. Governing Law/Jurisdiction</h2>
+                    <ul>
+                        <li>Laws of Japan; court with jurisdiction over the operator's location.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>8. Contact</h2>
+                    <p><strong>Contact:</strong>nocs.information@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Finnish Version -->
+            <div id="finnish" class="language-content" style="display: none;">
+                <div class="terms-section">
+                    <h2>1. Tarkoitus</h2>
+                    <ul>
+                        <li>Rentouttavan BGM:n toisto</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>2. Lisenssi</h2>
+                    <ul>
+                        <li>Henkilökohtaiseen, ei-yksinomaiseen käyttöön; ei uudelleenjakelua/muokkausta/kaupallista käyttöä ilman lupaa.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>3. Tilaukset</h2>
+                    <ul>
+                        <li>Aluekohtainen hinnoittelu; veloitus Apple ID:lle; automaattinen uusinta ellei peruta 24 h ennen.</li>
+                        <li>Hallinta: Asetukset > Apple ID > Tilaukset. Ostojen palautus sovelluksessa.</li>
+                        <li>Hyvitykset Applen käytännön mukaan.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>4. Kielletty toiminta</h2>
+                    <ul>
+                        <li>Lainvastaiset teot, käänteinen suunnittelu, palvelun häirintä jne.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>5. Vastuuvapaus</h2>
+                    <ul>
+                        <li>Ei vastuuta vahingoista (tahallisuus tai törkeä huolimattomuus poikkeuksena). Toiminnot voivat muuttua tai päättyä ilman ilmoitusta.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>6. Immateriaalioikeudet</h2>
+                    <ul>
+                        <li>Oikeudet NoCS systemillä tai oikeudenhaltijoilla.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>7. Sovellettava laki ja toimivalta</h2>
+                    <ul>
+                        <li>Japanin laki; toimivalta ylläpitäjän kotipaikan tuomioistuin.</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>8. Yhteys</h2>
+                    <p><strong>Yhteys:</strong>nocs.information@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="legal-links">
+                <h4>関連ページ</h4>
+                <a href="privacy-policy.html">プライバシーポリシー</a> | 
+                <a href="totonoi-detail.html">ととのい詳細</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLanguage(lang) {
+            // Hide all language contents
+            const contents = document.querySelectorAll('.language-content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            // Show selected language content
+            document.getElementById(lang).style.display = 'block';
+            
+            // Update active button
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>
