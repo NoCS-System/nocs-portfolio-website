@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketSOS - NoCS Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/NoCS_logo.png" alt="NoCS Logo" class="logo-image">
+                <span class="logo-text">NoCS</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">ホーム</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#apps" class="nav-link">アプリ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#skills" class="nav-link">スキル</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">お問い合わせ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="app-hero">
+                <div class="app-icon-large">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h1>PocketSOS</h1>
+                <p class="app-subtitle">緊急時対応・多言語サポートアプリ</p>
+                <div class="app-tech-hero">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Expo</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Location</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Details Section -->
+    <section class="app-details">
+        <div class="container">
+            <div class="app-info-section">
+                <h2>アプリ概要</h2>
+                <p>PocketSOSは、緊急時に必要な情報を素早く表示し、多言語でのコミュニケーションをサポートするアプリです。オフラインで動作し、位置情報の表示、緊急カードの管理、SOS表示機能を提供します。</p>
+                
+                <h3>主な機能</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h4>多言語定型文</h4>
+                        <p>緊急時に必要な定型文を多言語で表示・音声再生</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h4>緊急カード</h4>
+                        <p>個人情報や緊急連絡先をカード形式で管理・表示</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>位置情報表示</h4>
+                        <p>現在地の座標をリアルタイムで表示</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h4>SOS表示</h4>
+                        <p>緊急時のSOS信号を画面に大きく表示</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h4>資料管理</h4>
+                        <p>PDFや画像などの重要資料を端末内に保存・表示</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-flashlight"></i>
+                        </div>
+                        <h4>フラッシュライト</h4>
+                        <p>カメラのフラッシュライトを点滅制御</p>
+                    </div>
+                </div>
+
+                <h3>技術仕様</h3>
+                <div class="tech-specs">
+                    <div class="spec-item">
+                        <strong>プラットフォーム:</strong> iOS / Android
+                    </div>
+                    <div class="spec-item">
+                        <strong>開発環境:</strong> React Native + Expo
+                    </div>
+                    <div class="spec-item">
+                        <strong>言語:</strong> TypeScript
+                    </div>
+                    <div class="spec-item">
+                        <strong>データ保存:</strong> 端末内ローカルストレージ
+                    </div>
+                    <div class="spec-item">
+                        <strong>ネットワーク:</strong> オフライン動作
+                    </div>
+                </div>
+
+                <h3>プライバシー・セキュリティ</h3>
+                <div class="privacy-features">
+                    <div class="privacy-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>データは端末内にのみ保存</span>
+                    </div>
+                    <div class="privacy-item">
+                        <i class="fas fa-ban"></i>
+                        <span>外部サーバーとの通信なし</span>
+                    </div>
+                    <div class="privacy-item">
+                        <i class="fas fa-user-secret"></i>
+                        <span>個人情報の第三者提供なし</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Section -->
+            <div class="app-status-section">
+                <h2>開発状況</h2>
+                <div class="status-card">
+                    <div class="status-header">
+                        <span class="status-badge development">開発中</span>
+                        <span class="progress-text">進捗: 60%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                    <div class="status-timeline">
+                        <div class="timeline-item completed">
+                            <i class="fas fa-check"></i>
+                            <span>基本UI設計</span>
+                        </div>
+                        <div class="timeline-item completed">
+                            <i class="fas fa-check"></i>
+                            <span>多言語対応</span>
+                        </div>
+                        <div class="timeline-item completed">
+                            <i class="fas fa-check"></i>
+                            <span>位置情報機能</span>
+                        </div>
+                        <div class="timeline-item in-progress">
+                            <i class="fas fa-spinner"></i>
+                            <span>緊急カード機能</span>
+                        </div>
+                        <div class="timeline-item pending">
+                            <i class="far fa-circle"></i>
+                            <span>資料管理機能</span>
+                        </div>
+                        <div class="timeline-item pending">
+                            <i class="far fa-circle"></i>
+                            <span>最終テスト</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Links -->
+            <div class="legal-links">
+                <h3>法的文書</h3>
+                <div class="legal-buttons">
+                    <a href="pocketsos/privacy-policy.html" class="legal-btn">
+                        <i class="fas fa-shield-alt"></i>
+                        プライバシーポリシー
+                    </a>
+                    <a href="pocketsos/terms-of-service.html" class="legal-btn">
+                        <i class="fas fa-file-contract"></i>
+                        利用規約
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NoCS</h3>
+                    <p>モバイルアプリ開発チーム</p>
+                </div>
+                <div class="footer-section">
+                    <h4>アプリ</h4>
+                    <ul>
+                        <li><a href="faive-detail.html">FaiVE</a></li>
+                        <li><a href="yumemiruAI-detail.html">ユメミルAI</a></li>
+                        <li><a href="totonoi-detail.html">ととのい</a></li>
+                        <li><a href="pocketsos-detail.html">PocketSOS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>お問い合わせ</h4>
+                    <p>support@example.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NoCS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
