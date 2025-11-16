@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ナンプレ100 - アプリ詳細 | Portfolio</title>
+    <meta name="description" content="ナンプレ100 - どなたでも気軽に楽しめる、やさしい数独アプリの詳細情報">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .app-detail-hero {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+
+        .app-detail-hero .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .app-detail-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .app-detail-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo .logo-image {
+            height: 50px;
+            width: auto;
+            display: none;
+        }
+
+        .nav-logo .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-logo:has(.logo-image[src*="NoCS_logo.png"]) .logo-image {
+            display: block;
+        }
+
+        .nav-logo:has(.logo-image[src*="NoCS_logo.png"]) .logo-text {
+            display: none;
+        }
+
+        .app-info-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .app-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .app-description h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .app-description p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .app-features {
+            list-style: none;
+        }
+
+        .app-features li {
+            padding: 0.8rem 0;
+            color: #666;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .app-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4facfe;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tech-specs h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .tech-category {
+            margin-bottom: 2rem;
+        }
+
+        .tech-category h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: #f0f0f0;
+            color: #666;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .status-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .status-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge.development {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            width: 70%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .screenshots-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .screenshot-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .app-detail-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .app-info-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#apps" class="nav-link">Apps</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="index.html#apps" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        戻る
+    </a>
+
+    <!-- App Detail Hero -->
+    <section class="app-detail-hero">
+        <div class="container">
+            <!-- アイコンは後で images/nanpure100/ 配下に追加予定 -->
+            <img src="images/nanpure100/nanpure100-icon.png" alt="ナンプレ100 アイコン" class="app-icon">
+            <h1>ナンプレ100</h1>
+            <p>どなたでも気軽に楽しめる「やさしい数独アプリ」</p>
+            <div class="tech-tags">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Expo</span>
+                <span class="tech-tag">TypeScript</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots-section">
+        <div class="container">
+            <h2 class="section-title">スクリーンショット</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="images/nanpure100/ss1.png" alt="ナンプレ100 メイン画面">
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/nanpure100/ss2.png" alt="ナンプレ100 プレイ画面">
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/nanpure100/ss3.png" alt="ナンプレ100 クリア画面">
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/nanpure100/ss4.png" alt="ナンプレ100 設定・ダークモード画面">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Info Section -->
+    <section class="app-info-section">
+        <div class="container">
+            <h2 class="section-title">アプリ詳細</h2>
+            <div class="app-info-grid">
+                <div class="app-description">
+                    <h3>アプリ概要</h3>
+                    <p>
+                        ナンプレ100は、どなたでも気軽に楽しめる「やさしい数独アプリ」です。
+                        シンプルな操作と見やすい画面で、頭をリフレッシュしながら、落ち着いて数字パズルに集中できます。
+                    </p>
+                    <p>
+                        初心者の方も安心して遊べる全100問を収録。
+                        ちょっとしたスキマ時間でも、1問ずつコツコツ解いていく達成感を味わえます。
+                    </p>
+
+                    <h3>特徴</h3>
+                    <ul class="app-features">
+                        <li>大きくて見やすい数字で、目にやさしい画面設計</li>
+                        <li>かんたんな操作でストレスなくプレイ可能</li>
+                        <li>かんたん〜難しいまで、全100問を収録</li>
+                        <li>1問クリアごとに小さな達成感が積み重なる設計</li>
+                        <li>ダークモード対応で、夜間でも目にやさしい表示</li>
+                    </ul>
+
+                    <h3>こんな方におすすめ</h3>
+                    <ul class="app-features">
+                        <li>スマホで手軽に脳トレをしたい方</li>
+                        <li>暇つぶしや休憩中に、さっと遊べるアプリを探している方</li>
+                        <li>数独は好きだけれど、操作が複雑なアプリは苦手な方</li>
+                        <li>すっきり頭を使って、静かに集中したい方</li>
+                    </ul>
+
+                    <h3>遊び方はかんたん</h3>
+                    <p>
+                        ルールは「1〜9の数字を、同じ行・列・ブロックで重ならないように入れるだけ」。
+                        数独が初めての方でも、チュートリアルなしで直感的に遊び始められます。
+                    </p>
+
+                    <h3>広告について</h3>
+                    <ul class="app-features">
+                        <li>問題をクリアしたあとに、1回だけ広告を表示</li>
+                        <li>プレイの流れを邪魔しない、無理のないタイミングでの表示</li>
+                        <li>快適さを重視した、控えめな広告設計</li>
+                    </ul>
+
+                    <h3>心地よいデザイン</h3>
+                    <p>
+                        音も光も控えめな、落ち着いたデザイン。
+                        派手すぎない色合いで、静かに数独の世界に入り込めるように設計しています。
+                    </p>
+                    <p>
+                        ちょっとした時間に、数字でリフレッシュ。<br>
+                        <strong>「ナンプレ100 - 数独で脳トレ！」</strong>で、今日もすっきり気分を整えましょう。
+                    </p>
+                </div>
+
+                <div class="tech-specs">
+                    <h3>技術仕様（想定）</h3>
+
+                    <div class="tech-category">
+                        <h4>フロントエンド</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Expo</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>ゲームロジック</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">数独盤面生成・検証</span>
+                            <span class="tech-tag">ヒント・入力チェック</span>
+                            <span class="tech-tag">クリア判定</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>データ管理</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ローカル永続化</span>
+                            <span class="tech-tag">進捗保存</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>UI/UX</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ダークモード対応</span>
+                            <span class="tech-tag">シンプル操作</span>
+                            <span class="tech-tag">読みやすいタイポグラフィ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Section -->
+    <section class="status-section">
+        <div class="container">
+            <div class="status-content">
+                <span class="status-badge development">開発中</span>
+                <h3>開発状況</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p>現在開発中のタイトルです。リリース準備が整い次第、ストアリンクや詳細情報を追記予定です。</p>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                    <h4 style="margin-bottom: 1rem; color: #666;">法的文書</h4>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="nanpure100/privacy-policy.html" class="btn btn-secondary" style="text-decoration: none;">
+                            <i class="fas fa-shield-alt"></i>
+                            プライバシーポリシー
+                        </a>
+                        <a href="nanpure100/terms-of-service.html" class="btn btn-secondary" style="text-decoration: none;">
+                            <i class="fas fa-file-contract"></i>
+                            利用規約
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用規約 - ナンプレ100 | NoCS AppDev</title>
+    <meta name="description" content="ナンプレ100アプリの利用規約">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .terms-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+            line-height: 1.8;
+        }
+
+        .terms-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .terms-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .terms-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .terms-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .terms-content h2 {
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+            color: #333;
+            border-bottom: 2px solid #4facfe;
+            padding-bottom: 0.5rem;
+        }
+
+        .terms-content p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .terms-content ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .terms-content li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .terms-content strong {
+            color: #333;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .terms-container {
+                padding: 100px 15px 60px;
+            }
+
+            .terms-content {
+                padding: 2rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#apps" class="nav-link">Apps</a>
+                <a href="../index.html#skills" class="nav-link">Skills</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="../nanpure100-detail.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        ナンプレ100詳細に戻る
+    </a>
+
+    <div class="terms-container">
+        <div class="terms-header">
+            <h1>利用規約</h1>
+            <p><strong>アプリ名:</strong> ナンプレ100</p>
+            <p><strong>運営:</strong> NoCS System</p>
+        </div>
+
+        <div class="terms-content">
+            <p><strong>制定日：2025年11月10日</strong></p>
+
+            <h2>第1条（適用）</h2>
+            <p>
+                本規約は、アプリ「ナンプレ100」（以下「本アプリ」といいます）の利用条件を定めるものです。
+                利用者は、本アプリをインストールまたは利用した時点で、本規約に同意したものとみなします。
+            </p>
+
+            <h2>第2条（利用者）</h2>
+            <p>
+                利用者は、自らの責任で本アプリを利用するものとし、端末・通信環境等の準備および維持管理を行うものとします。
+                未成年が利用する場合、保護者等の法定代理人の同意を得たうえで利用してください。
+            </p>
+
+            <h2>第3条（禁止事項）</h2>
+            <p>利用者は、以下の行為を行ってはなりません。</p>
+            <ul>
+                <li>法令または公序良俗に反する行為</li>
+                <li>本アプリやサーバーの機能を妨害する行為</li>
+                <li>逆コンパイル・リバースエンジニアリング等の解析行為</li>
+                <li>不正広告・スパム・第三者の権利侵害につながる行為</li>
+                <li>その他、運営者が不適切と判断する行為</li>
+            </ul>
+
+            <h2>第4条（広告および解析）</h2>
+            <p>
+                本アプリには Google LLC の「Google Mobile Ads SDK」が組み込まれており、
+                広告配信のためにデバイス ID 等の情報が第三者によって取得・利用される場合があります。
+            </p>
+            <p>
+                広告表示および計測に関する詳細は、Google のプライバシーポリシーをご確認ください。
+                利用者が広告識別子の利用を制限する場合は、OS が提供する設定機能をご利用ください。
+            </p>
+
+            <h2>第5条（個人情報・プライバシー）</h2>
+            <p>
+                運営者は、利用者の個人情報を法律に従って適切に取り扱います。
+                本アプリで取得したデータの取り扱いは、別途定めるプライバシーポリシーに従います。
+                利用者は、本アプリの利用を終了することでデータ送信を停止できます。
+            </p>
+
+            <h2>第6条（著作権等）</h2>
+            <p>
+                本アプリおよび本アプリに関するすべてのコンテンツに関する知的財産権は、
+                運営者または正当な権利者に帰属します。利用者は、私的利用の範囲を超えてこれらを使用することはできません。
+            </p>
+
+            <h2>第7条（免責事項）</h2>
+            <p>
+                運営者は、本アプリの提供・利用により利用者に発生した損害について、一切の責任を負いません。
+                本アプリは現状有姿で提供され、運営者はその完全性・正確性・有益性等について保証しません。
+                また、メンテナンスや障害等により本アプリの提供を中止または停止する場合があります。
+            </p>
+
+            <h2>第8条（規約の変更）</h2>
+            <p>
+                運営者は、必要と判断した場合、利用者に通知することなく本規約を変更できます。
+                変更後に本アプリを利用した場合、利用者は変更後の規約に同意したものとみなします。
+            </p>
+
+            <h2>第9条（準拠法・裁判管轄）</h2>
+            <p>
+                本規約は日本法に準拠し、本アプリに関して紛争が生じた場合は、
+                運営者の所在地を管轄する裁判所を専属的合意管轄裁判所とします。
+            </p>
+
+            <h2>お問い合わせ先</h2>
+            <p>ナンプレ100 運営：NoCS System</p>
+            <p>メールアドレス：nocs.information@gmail.com</p>
+
+            <div class="last-updated">
+                <p>制定日：2025年11月10日</p>
+                <p><a href="privacy-policy.html">プライバシーポリシー</a> | <a href="../nanpure100-detail.html">ナンプレ100詳細</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+
+
