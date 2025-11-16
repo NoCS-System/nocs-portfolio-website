@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - 卵クリッカー | NoCS AppDev</title>
+    <meta name="description" content="卵クリッカーアプリのプライバシーポリシー">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .policy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+            line-height: 1.8;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .policy-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .policy-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .policy-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .policy-content h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #333;
+            border-bottom: 2px solid #f6d365;
+            padding-bottom: 0.5rem;
+        }
+
+        .policy-content h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+            color: #444;
+        }
+
+        .policy-content p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .policy-content ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .policy-content li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .policy-content strong {
+            color: #333;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .policy-container {
+                padding: 100px 15px 60px;
+            }
+
+            .policy-content {
+                padding: 2rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#apps" class="nav-link">Apps</a>
+                <a href="../index.html#skills" class="nav-link">Skills</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="../egg-clicker-detail.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        卵クリッカー詳細に戻る
+    </a>
+
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1>プライバシーポリシー</h1>
+            <p><strong>アプリ名:</strong> 卵クリッカー</p>
+            <p><strong>事業者名:</strong> NoCS System</p>
+        </div>
+
+        <div class="policy-content">
+            <p>
+                NoCS System（以下「当社」）は、当社が提供する「卵クリッカー」（以下「本アプリ」）におけるユーザーの情報の取扱いについて、
+                以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。
+            </p>
+
+            <h2>1. 収集する情報</h2>
+            <h3>1-1. ユーザーが本アプリ内で直接入力する情報</h3>
+            <p>本アプリでは、ユーザーが氏名・メールアドレス等をアプリ内で直接入力する機能は原則として設けておらず、基本的に収集しません。</p>
+
+            <h3>1-2. 端末内に保存されるゲームデータ</h3>
+            <p>本アプリは、以下のようなゲーム内データを端末ローカルに保存します。</p>
+            <ul>
+                <li>タップ数</li>
+                <li>孵化状況・図鑑情報</li>
+                <li>ブースト倍率・残り時間</li>
+                <li>BGM設定（ON/OFFなど）</li>
+                <li>その他ゲーム進行に必要なステータス情報</li>
+            </ul>
+            <p>これらのデータはユーザーの端末内にのみ保存され、当社のサーバーには送信されません。</p>
+
+            <h3>1-3. 広告配信のためにパートナーが取得し得る情報</h3>
+            <p>本アプリでは、広告配信のために第三者パートナーのSDK/サービスを利用する場合があります。その際、以下の情報が取得されることがあります。</p>
+            <ul>
+                <li>端末識別子（Appleの広告識別子IDFA等、ユーザーの許諾がある場合）</li>
+                <li>端末情報（OS種別・バージョン、機種等）</li>
+                <li>IPアドレス</li>
+                <li>アプリ内イベント（広告視聴完了、報酬付与など）</li>
+                <li>推定位置情報（正確な位置情報は取得しません）</li>
+                <li>クッキーまたは類似技術による利用状況</li>
+            </ul>
+            <p>iOSにおいては、AppTrackingTransparency（ATT）等により、該当地域ではトラッキングやパーソナライズド広告の可否をユーザーに確認します。</p>
+
+            <h2>2. 利用目的</h2>
+            <p>当社および広告パートナーは、取得した情報を以下の目的で利用します。</p>
+            <ul>
+                <li>広告の表示・最適化および広告効果の測定</li>
+                <li>不正行為の検知・防止</li>
+                <li>本アプリの機能提供・品質改善・障害対応</li>
+                <li>利用状況の分析と今後の開発・運営方針の検討</li>
+                <li>法令・ガイドラインに基づく対応</li>
+            </ul>
+
+            <h2>3. 第三者提供</h2>
+            <p>当社は、主として広告配信のため、以下の第三者パートナーのSDK/サービスを利用します。</p>
+            <ul>
+                <li>
+                    Google AdMob（Google LLC）<br>
+                    プライバシーポリシー: <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">Google プライバシーと利用規約</a><br>
+                    広告とCookieに関する説明: <a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener noreferrer">広告に関するポリシー</a>
+                </li>
+            </ul>
+            <p>当社が取得した情報を第三者へ販売することはありません。</p>
+
+            <h2>4. 情報の保存期間</h2>
+            <ul>
+                <li>端末ローカルに保存するゲームデータは、ユーザーが削除するまで保持されます（アプリのアンインストールにより消去されます）。</li>
+                <li>広告パートナーが取得したデータの保存期間は各社のポリシーに従います。詳細は各社のプライバシーポリシーをご確認ください。</li>
+            </ul>
+
+            <h2>5. 個人情報の取り扱い</h2>
+            <p>
+                当社は、本アプリ内でユーザーの氏名・住所・連絡先等の直接的な個人情報を収集しません。
+                ただし、法令に基づく要請やユーザーからのお問い合わせ対応の過程で、ユーザーが任意に提供した情報を取得する場合があります。
+            </p>
+
+            <h2>6. セキュリティ</h2>
+            <p>
+                当社は、取得した情報の漏えい、滅失、毀損等の防止のため、合理的な範囲で必要かつ適切な安全管理措置を講じます。
+            </p>
+
+            <h2>7. 国外での取り扱い</h2>
+            <p>
+                広告パートナー等のサーバーは国外に設置されることがあり、ユーザー情報が国外で処理される場合があります。
+                これらの取り扱いは各社のプライバシーポリシーに従って行われます。
+            </p>
+
+            <h2>8. 未成年の利用</h2>
+            <p>
+                本アプリは一般向けであり、児童に対して個人情報の収集を故意に行いません。
+                保護者の方で児童の情報提供にご懸念がある場合は、下記お問い合わせ先までご連絡ください。
+            </p>
+
+            <h2>9. ユーザーの権利</h2>
+            <p>
+                該当法域（例：GDPR、CCPA等）において、ユーザーは自己に関する情報へのアクセス、訂正、削除、処理の制限、
+                異議申立て等の権利を有する場合があります。行使を希望する場合は、下記お問い合わせ先へご連絡ください。
+            </p>
+            <p>
+                また、広告識別子のリセット・トラッキング許諾の変更は、端末の設定（例：iOSの「設定」＞「プライバシーとセキュリティ」＞「トラッキング」等）から行うことができます。
+            </p>
+
+            <h2>10. ポリシーの変更</h2>
+            <p>
+                当社は、必要に応じて本ポリシーを変更することがあります。変更後は、本アプリ内または当社所定の方法で告知し、
+                告知時に効力を生じます。
+            </p>
+
+            <h2>11. お問い合わせ</h2>
+            <p>
+                本ポリシーに関するお問い合わせは、以下のメールアドレスまでご連絡ください。
+            </p>
+            <p><strong>メールアドレス:</strong> nocs.information@gmail.com</p>
+
+            <h2>12. 事業者情報</h2>
+            <p><strong>事業者名:</strong> NoCS System</p>
+            <p><strong>連絡先:</strong> nocs.information@gmail.com</p>
+
+            <div class="last-updated">
+                <p>制定日（発効日）：2025年11月17日</p>
+                <p><a href="terms-of-service.html">利用規約</a> | <a href="../egg-clicker-detail.html">卵クリッカー詳細</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+
+
