@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理性くんと感情ちゃん - アプリ詳細 | Portfolio</title>
+    <meta name="description" content="理性くんと感情ちゃん - 2つの視点からあなたの相談に答えるAI相談アプリの詳細情報">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .app-detail-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+
+        .app-detail-hero .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+            object-fit: cover;
+        }
+
+        .app-detail-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .app-detail-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .screenshots-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot-item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .screenshot-caption {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .screenshot-caption h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .screenshot-caption p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .app-info-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .app-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .app-description h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .app-description p, .app-description li {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .app-features, .app-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .app-features li {
+            padding: 0.8rem 0;
+            color: #666;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .app-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tech-specs h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .tech-category {
+            margin-bottom: 2rem;
+        }
+
+        .tech-category h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: #f0f0f0;
+            color: #666;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .status-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .status-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge.development {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 60%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .app-detail-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .app-info-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#apps" class="nav-link">Apps</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="index.html#apps" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        戻る
+    </a>
+
+    <!-- App Detail Hero -->
+    <section class="app-detail-hero">
+        <div class="container">
+            <img src="images/NoCS_logo.png" alt="理性くんと感情ちゃん アイコン" class="app-icon">
+            <h1>理性くんと感情ちゃん</h1>
+            <p>あなたの相談に2つの視点から答える、革新的なAI相談アプリ</p>
+            <div class="tech-tags">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Expo</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">AI</span>
+                <span class="tech-tag">Chat UI</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots-section">
+        <div class="container">
+            <h2 class="section-title">スクリーンショット</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="images/NoCS_logo.png" alt="メイン画面（仮）">
+                    <div class="screenshot-caption">
+                        <h4>メイン画面（仮）</h4>
+                        <p>画像は後日追加されます</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/NoCS_logo.png" alt="グループチャット（仮）">
+                    <div class="screenshot-caption">
+                        <h4>グループチャット（仮）</h4>
+                        <p>画像は後日追加されます</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/NoCS_logo.png" alt="メンション機能（仮）">
+                    <div class="screenshot-caption">
+                        <h4>メンション機能（仮）</h4>
+                        <p>@理性くん / @感情ちゃん</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Info Section -->
+    <section class="app-info-section">
+        <div class="container">
+            <h2 class="section-title">アプリ詳細</h2>
+            <div class="app-info-grid">
+                <div class="app-description">
+                    <h3>アプリ概要</h3>
+                    <p>
+                        「理性くんと感情ちゃん」は、同じ相談に対して論理と共感の2つの視点から回答が得られるAI相談アプリです。
+                        冷静な分析と温かい言葉を同時に受け取ることで、迷いの中でも前に進むヒントが見つかります。
+                    </p>
+                    <h3>主な機能</h3>
+                    <ul class="app-features">
+                        <li>2つのAIキャラクターが同時に回答（理性くん＝論理AI、感情ちゃん＝感情AI）</li>
+                        <li>グループチャット形式の親しみやすいUI</li>
+                        <li>@理性くん/@感情ちゃん で片方だけにメンションして質問可能</li>
+                        <li>10%の確率で「皮肉くん」がサプライズ登場</li>
+                        <li>匿名性とプライバシーに配慮した設計</li>
+                    </ul>
+                    <h3>登場キャラクター</h3>
+                    <ul class="app-list">
+                        <li><strong>理性くん（論理AI）</strong>：冷静・客観・構造化。因果関係を整理し、選択肢を明確化。</li>
+                        <li><strong>感情ちゃん（感情AI）</strong>：共感・受容・伴走。「それ本当にしんどかったよね」と気持ちに寄り添う。</li>
+                        <li><strong>皮肉くん（ランダム登場）</strong>：10%で乱入。意外な視点で思考の枠を広げる。</li>
+                    </ul>
+                    <h3>こんな人におすすめ</h3>
+                    <ul class="app-list">
+                        <li>人生の選択に迷っている</li>
+                        <li>自分の気持ちを整理したい</li>
+                        <li>客観と感情の両方の視点が欲しい</li>
+                        <li>誰にも相談できない悩みがある</li>
+                        <li>自己理解を深めたい</li>
+                    </ul>
+                    <h3>重要な注意事項</h3>
+                    <ul class="app-list">
+                        <li>本アプリは参考程度のサービスです</li>
+                        <li>医療・法律・精神疾患の診断は行いません</li>
+                        <li>科学的根拠に基づくものではありません</li>
+                        <li>人生の重要な決定の根拠として使用しないでください</li>
+                        <li>緊急時や深刻な悩みは専門機関へご相談ください</li>
+                    </ul>
+                    <h3>プライバシーとセキュリティ</h3>
+                    <ul class="app-list">
+                        <li>会話内容は安全に管理されます</li>
+                        <li>個人情報の収集は最小限</li>
+                        <li>広告のための匿名データのみを使用</li>
+                    </ul>
+                </div>
+                <div class="tech-specs">
+                    <h3>技術仕様</h3>
+                    <div class="tech-category">
+                        <h4>フロントエンド</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Expo</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4>UI/UX</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Chat UI</span>
+                            <span class="tech-tag">グループチャット</span>
+                            <span class="tech-tag">Mention</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4>AI・分析</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">自然言語処理</span>
+                            <span class="tech-tag">多視点応答</span>
+                            <span class="tech-tag">キャラクター応答</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4>開発環境</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">GitHub</span>
+                            <span class="tech-tag">EAS Build</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Section -->
+    <section class="status-section">
+        <div class="container">
+            <div class="status-content">
+                <span class="status-badge development">開発中</span>
+                <h3>開発進捗</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p>現在60%完成。アイコンとスクリーンショットは後日掲載予定です。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy/Terms Link -->
+    <section class="privacy-link-section">
+        <div class="container">
+            <div class="privacy-link-content">
+                <h3>ポリシーについて</h3>
+                <p>「理性くんと感情ちゃん」の
+                    <a href="riseikanjo/privacy-policy.html" class="privacy-link">プライバシーポリシー</a> /
+                    <a href="riseikanjo/terms-of-service.html" class="privacy-link">利用規約</a>
+                    をご確認いただけます。</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
