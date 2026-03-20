@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - ボードゲーム集 | NoCS AppDev</title>
+    <meta name="description" content="みんなでオリジナルボードゲーム集！のプライバシーポリシー">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .policy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+            line-height: 1.8;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .policy-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #d35400 0%, #f1c40f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .policy-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .policy-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .policy-content h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #333;
+            border-bottom: 2px solid #d35400;
+            padding-bottom: 0.5rem;
+        }
+
+        .policy-content h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem;
+            color: #444;
+        }
+
+        .policy-content p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .policy-content ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .policy-content li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .policy-content strong {
+            color: #333;
+        }
+
+        .policy-content a {
+            color: #d35400;
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .policy-container {
+                padding: 100px 15px 60px;
+            }
+
+            .policy-content {
+                padding: 2rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#apps" class="nav-link">Apps</a>
+                <a href="../index.html#skills" class="nav-link">Skills</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="../board-game-collection-detail.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        ボードゲーム集詳細に戻る
+    </a>
+
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1>プライバシーポリシー</h1>
+            <p><strong>アプリ名:</strong> みんなでオリジナルボードゲーム集！</p>
+            <p><strong>運営:</strong> NoCS System</p>
+            <p><strong>最終更新日:</strong> 2026年3月20日</p>
+        </div>
+
+        <div class="policy-content">
+            <h2>収集する情報</h2>
+            <p>
+                本アプリ自体はユーザーの個人情報を収集しません。
+                ゲームのデータは全てデバイス内に保存され、開発者のサーバーへの送信は行いません。
+            </p>
+
+            <h2>広告</h2>
+            <p>
+                本アプリはGoogle AdMob（Google LLC）によるインタースティシャル広告を表示します。
+                広告表示に際し、Google AdMobがデバイス情報や広告識別子などの情報を収集する場合があります。
+            </p>
+            <p>
+                詳しくはGoogleのプライバシーポリシーをご確認ください：<br>
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+            </p>
+
+            <h2>第三者サービス</h2>
+            <p>本アプリは以下の第三者サービスを使用しています。</p>
+            <ul>
+                <li>Google AdMob（広告配信）</li>
+            </ul>
+
+            <h2>お問い合わせ</h2>
+            <p>本ポリシーに関するお問い合わせは、以下のメールアドレスまでご連絡ください。</p>
+            <p>運営者：NoCS System</p>
+            <p>メールアドレス：nocs.information@gmail.com</p>
+
+            <div class="last-updated">
+                <p>最終更新日：2026年3月20日</p>
+                <p><a href="terms-of-service.html">利用規約</a> | <a href="../board-game-collection-detail.html">ボードゲーム集詳細</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
