@@ -612,6 +612,11 @@ section {
     color: #0c5460;
 }
 
+.status-badge.released {
+    background: #d4edda;
+    color: #155724;
+}
+
 .coming-soon .app-preview {
     background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
 }
