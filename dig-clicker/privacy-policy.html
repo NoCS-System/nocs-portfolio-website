@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - 掘り掘りクリッカー | NoCS AppDev</title>
-    <meta name="description" content="掘り掘りクリッカーのプライバシーポリシー">
+    <title>プライバシーポリシー - ほりほりクリッカー | NoCS AppDev</title>
+    <meta name="description" content="ほりほりクリッカーのプライバシーポリシー">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -76,12 +76,18 @@
             padding-bottom: 0.5rem;
         }
 
+        .policy-content h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem;
+            color: #444;
+        }
+
         .policy-content p {
             margin-bottom: 1rem;
             color: #555;
         }
 
-        .policy-content ul {
+        .policy-content ul, .policy-content ol {
             margin: 1rem 0;
             padding-left: 1.5rem;
         }
@@ -148,55 +154,132 @@
     <!-- Back Button -->
     <a href="../dig-clicker-detail.html" class="back-button">
         <i class="fas fa-arrow-left"></i>
-        掘り掘りクリッカー詳細に戻る
+        ほりほりクリッカー詳細に戻る
     </a>
 
     <div class="policy-container">
         <div class="policy-header">
             <h1>プライバシーポリシー</h1>
-            <p><strong>アプリ名:</strong> 掘り掘りクリッカー</p>
-            <p><strong>運営:</strong> NoCS System</p>
-            <p><strong>最終更新日:</strong> 2026年5月7日</p>
+            <p><strong>アプリ名:</strong> ほりほりクリッカー</p>
+            <p><strong>事業者:</strong> ほりほりクリッカー 開発者</p>
+            <p><strong>お問い合わせ:</strong> nocs.information@gmail.com</p>
+            <p><strong>制定日:</strong> 2026年5月7日</p>
         </div>
 
         <div class="policy-content">
-            <h2>収集する情報</h2>
             <p>
-                本アプリ自体はユーザーの個人情報を収集しません。
-                ゲームの進行データは全てデバイス内に保存され、開発者のサーバーへの送信は行いません。
+                当方は、本アプリの利用にあたって取得する情報の取り扱いについて、本プライバシーポリシー（以下「本ポリシー」といいます）を定めます。本アプリをご利用いただく前に、本ポリシーをよくお読みください。
             </p>
 
-            <h2>広告</h2>
-            <p>
-                本アプリはGoogle AdMob（Google LLC）によるインタースティシャル広告およびリワード広告を表示します。
-                広告表示に際し、Google AdMobがデバイス情報や広告識別子などの情報を収集する場合があります。
-            </p>
-            <p>
-                詳しくはGoogleのプライバシーポリシーをご確認ください：<br>
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
-            </p>
+            <h2>1. 当方が取得する情報</h2>
+            <p>本アプリは、以下の情報を取得・処理する場合があります。</p>
 
-            <h2>トラッキング</h2>
+            <h3>1.1 端末上にのみ保存される情報（オフライン）</h3>
             <p>
-                本アプリはiOS 14.5以降のApp Tracking Transparency (ATT)に対応しています。
-                広告のパーソナライズのため、初回起動時にトラッキング許可を求める場合があります。
-                許可しない場合でもアプリの全機能をご利用いただけます。
+                ユーザーのゲーム進行・設定等は、原則としてご利用の端末内にのみ保存され、当方のサーバーには送信されません。具体的には次のものが含まれます。
             </p>
-
-            <h2>第三者サービス</h2>
-            <p>本アプリは以下の第三者サービスを使用しています。</p>
             <ul>
-                <li>Google AdMob（広告配信）</li>
+                <li>ゲーム内の進行状況（深度・コイン・レベル・所持レリック等）</li>
+                <li>オンボーディング完了の有無</li>
+                <li>直近にレビュー誘導を表示した日時</li>
+                <li>ブースト残時間など揮発的な内部状態</li>
+            </ul>
+            <p>これらは、お使いの端末（iOS の AsyncStorage 領域）に保存され、本アプリをアンインストールした時点で削除されます。</p>
+
+            <h3>1.2 広告事業者を経由して取得される情報</h3>
+            <p>
+                本アプリは、Google LLC が提供する <strong>Google AdMob</strong>（以下「AdMob」）を通じて広告を配信します。AdMob は、広告の最適化・効果測定・不正検知等の目的で次のような情報を取得・処理することがあります。
+            </p>
+            <ul>
+                <li>IDFA（広告識別子）※後述の ATT で許可された場合のみ</li>
+                <li>端末の種類、OS バージョン、言語設定、おおよその位置情報（IP アドレス由来）</li>
+                <li>広告のリクエスト・表示・操作に関するイベントデータ</li>
+            </ul>
+            <p>
+                AdMob のデータ取扱いの詳細は、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a>および <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob & AdSense のポリシー</a>をご参照ください。
+            </p>
+
+            <h3>1.3 取得しない情報</h3>
+            <p>本アプリは、以下の情報を取得しません。</p>
+            <ul>
+                <li>氏名、住所、電話番号、メールアドレス、生年月日、性別等の個人を直接特定する情報</li>
+                <li>連絡先・写真・カメラ・マイク・正確な位置情報</li>
+                <li>端末上の他のアプリ利用状況</li>
             </ul>
 
-            <h2>お問い合わせ</h2>
-            <p>本ポリシーに関するお問い合わせは、以下のメールアドレスまでご連絡ください。</p>
-            <p>運営者：NoCS System</p>
-            <p>メールアドレス：nocs.information@gmail.com</p>
+            <h2>2. 利用目的</h2>
+            <p>取得した情報は、次の目的の範囲で利用します。</p>
+            <ol>
+                <li>ゲームの提供、進行状況の保存・復元</li>
+                <li>アプリの安定動作および不具合解析（クラッシュレポートを利用する場合）</li>
+                <li>広告（AdMob）の表示および効果測定</li>
+                <li>重要なお知らせ等の表示</li>
+                <li>利用規約違反・不正利用の調査・対応</li>
+            </ol>
+
+            <h2>3. App Tracking Transparency（ATT）について</h2>
+            <p>
+                iOS のトラッキング許可ポリシー（App Tracking Transparency）に基づき、本アプリは初回起動時または広告の初回ロード前にトラッキング許可ダイアログを表示します。
+            </p>
+            <ul>
+                <li><strong>「許可」を選択された場合</strong>: AdMob は IDFA を用いた、利用状況に応じた広告（パーソナライズ広告）を配信することがあります。</li>
+                <li><strong>「許可しない」を選択された場合</strong>: IDFA は使用されず、すべて非パーソナライズ広告（NPA）として配信されます。アプリの利用に支障はありません。</li>
+            </ul>
+            <p>許可状態は、お使いの iOS の「設定 > プライバシーとセキュリティ > トラッキング」からいつでも変更できます。</p>
+
+            <h2>4. 第三者提供</h2>
+            <p>
+                当方は、法令に基づく場合を除き、ユーザーの個人情報を第三者に提供しません。
+                ただし、本アプリの広告配信に必要な範囲で、AdMob（Google LLC）に対して 1.2 に記載の情報が送信されます。
+            </p>
+
+            <h2>5. データの保管および国際的な移転</h2>
+            <ul>
+                <li>端末上のデータ（1.1）は、ユーザーの端末内にのみ保存されます。</li>
+                <li>AdMob を通じて取得される情報（1.2）は、Google LLC の運営するサーバー（米国を含む海外を含むことがあります）に転送・保管される場合があります。Google は、SCC（標準契約条項）等の法的枠組みに基づきデータの保護措置を講じています。</li>
+            </ul>
+
+            <h2>6. データの保持期間と削除</h2>
+            <ul>
+                <li><strong>端末上のデータ</strong>: 本アプリをアンインストールするか、iOS の「App を削除」を行うと削除されます。</li>
+                <li><strong>AdMob 経由のデータ</strong>: Google の保持ポリシーに従い、Google 側で適切な期間保持・削除されます。</li>
+            </ul>
+
+            <h2>7. お子様の利用について</h2>
+            <p>
+                本アプリは原則として 4 歳以上を対象としています。13 歳未満（または該当国の法定年齢未満）のお子様が本アプリを利用する場合は、保護者の方の同意のもとでご利用ください。
+                当方は、児童から意図的に個人情報を取得することはありません。万一そのような情報を取得していることが判明した場合、速やかに削除いたします。
+            </p>
+
+            <h2>8. ユーザーの権利</h2>
+            <p>ユーザーは、ご自身に関する情報について、適用される法令の範囲で次の権利を行使できます。</p>
+            <ul>
+                <li>開示・訂正・削除の請求</li>
+                <li>利用停止・第三者提供停止の請求</li>
+                <li>ご質問・ご意見・苦情のお申し出</li>
+            </ul>
+            <p>これらの請求は、本ポリシー末尾のお問い合わせ先までご連絡ください。</p>
+
+            <h2>9. セキュリティ</h2>
+            <p>
+                当方は、取得した情報を不正アクセス、紛失、破壊、改ざん、漏えい等から保護するため、合理的な安全管理措置を講じます。
+            </p>
+
+            <h2>10. 本ポリシーの変更</h2>
+            <p>
+                法令の改正、サービスの内容変更、その他当方が必要と判断した場合、本ポリシーを変更することがあります。重要な変更を行う場合は、本アプリ内またはアプリ配信ストアの当該ページ等で告知します。
+            </p>
+
+            <h2>11. 準拠法</h2>
+            <p>本ポリシーは、日本法を準拠法とします。</p>
+
+            <h2>12. お問い合わせ</h2>
+            <p>本ポリシーや本アプリのプライバシーに関するご質問・ご要望は、下記までお寄せください。</p>
+            <p>メールアドレス：<strong>nocs.information@gmail.com</strong></p>
 
             <div class="last-updated">
-                <p>最終更新日：2026年5月7日</p>
-                <p><a href="terms-of-service.html">利用規約</a> | <a href="../dig-clicker-detail.html">掘り掘りクリッカー詳細</a></p>
+                <p>制定日：2026年5月7日</p>
+                <p><a href="terms-of-service.html">利用規約</a> | <a href="../dig-clicker-detail.html">ほりほりクリッカー詳細</a></p>
             </div>
         </div>
     </div>
