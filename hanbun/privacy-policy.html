@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - Hanbun | NoCS AppDev</title>
+    <meta name="description" content="Hanbun -育児を半分こ- のプライバシーポリシー">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .policy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+            line-height: 1.8;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .policy-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #e88ca5 0%, #7ba4d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .policy-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .policy-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .policy-content h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #333;
+            border-bottom: 2px solid #e88ca5;
+            padding-bottom: 0.5rem;
+        }
+
+        .policy-content h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem;
+            color: #444;
+        }
+
+        .policy-content p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .policy-content ul, .policy-content ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .policy-content li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .policy-content strong {
+            color: #333;
+        }
+
+        .policy-content a {
+            color: #e88ca5;
+            text-decoration: underline;
+        }
+
+        .policy-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .policy-content table th,
+        .policy-content table td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+            color: #555;
+        }
+
+        .policy-content table th {
+            background: #f8f9fa;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .last-updated a {
+            color: #e88ca5;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .policy-container {
+                padding: 100px 15px 60px;
+            }
+
+            .policy-content {
+                padding: 2rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .policy-content table {
+                font-size: 0.85rem;
+            }
+
+            .policy-content table th,
+            .policy-content table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#apps" class="nav-link">Apps</a>
+                <a href="../index.html#skills" class="nav-link">Skills</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="../hanbun-detail.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Hanbun 詳細に戻る
+    </a>
+
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1>プライバシーポリシー</h1>
+            <p>最終更新日: 2026年5月13日</p>
+        </div>
+
+        <div class="policy-content">
+            <p>
+                NoCS（以下「当方」といいます）は、iOS／Android アプリ「Hanbun（ハンブン）」（以下「本アプリ」といいます）におけるユーザーのプライバシーを尊重し、個人情報の保護に関して下記の方針を定めます。
+            </p>
+
+            <h2>1. 収集する情報</h2>
+
+            <h3>1-1. 端末内にのみ保存される情報（ローカルデータ）</h3>
+            <p>
+                本アプリは、ユーザーが入力した以下の情報を端末内のローカルストレージ（AsyncStorage）に保存します。これらの情報は当方のサーバーには送信されません。
+            </p>
+            <ul>
+                <li>ユーザーが設定したニックネーム（例: パパ、ママ）</li>
+                <li>ユーザーが選択した絵文字アイコン</li>
+                <li>育児記録（種類、量、時刻）</li>
+                <li>アプリ内の進行状況（経験値、レベル、解放した実績、ストリーク等）</li>
+                <li>アプリの設定値</li>
+            </ul>
+
+            <h3>1-2. 夫婦同期機能を有効にした場合に送信される情報</h3>
+            <p>
+                ユーザーが任意で「夫婦同期」機能を有効化した場合に限り、以下の情報が Google LLC が運営する Firebase Firestore（以下「Firestore」といいます）に送信され、ペアを組んだ別端末との間で共有されます。
+            </p>
+            <ul>
+                <li>育児記録（種類、量、時刻）</li>
+                <li>ユーザーが設定したニックネーム</li>
+                <li>ユーザーが選択した絵文字アイコン</li>
+                <li>ペアコード（端末内で生成された6桁の英数字。当方が個別ユーザーを識別する目的では使用しません）</li>
+            </ul>
+            <p>同期機能を有効化しないユーザーの情報は、一切外部に送信されません。</p>
+
+            <h3>1-3. 当方が収集しない情報</h3>
+            <p>本アプリは、以下の情報を<strong>一切収集しません</strong>。</p>
+            <ul>
+                <li>メールアドレス、電話番号、本名、住所、生年月日</li>
+                <li>写真、カメラ画像、マイク音声</li>
+                <li>位置情報、IPアドレス</li>
+                <li>連絡先、カレンダー、リマインダー</li>
+                <li>健康データ、医療データ</li>
+                <li>広告識別子（IDFA／GAID）</li>
+                <li>クラッシュレポート、利用統計データ</li>
+                <li>お子さまに関する個人情報（名前、写真、生年月日、健康記録等）</li>
+            </ul>
+
+            <h2>2. 情報の利用目的</h2>
+            <p>収集した情報は、以下の目的でのみ利用します。</p>
+            <ul>
+                <li>アプリ機能の提供（育児記録の表示・集計・グラフ化、経験値・レベル計算）</li>
+                <li>夫婦同期機能を有効にした場合に限り、ペアを組んだ別端末との間でデータを同期し、双方の画面に最新情報を反映させること</li>
+                <li>アプリの動作不具合への対応（端末内ログのみ）</li>
+            </ul>
+
+            <h2>3. 第三者への提供</h2>
+            <p>当方は、収集した情報を法令に基づく場合を除き、ユーザー本人の同意なく第三者に提供することはありません。</p>
+            <p>ただし、以下の事業者については、サービス提供のために情報処理を委託しています。</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>事業者名</th>
+                        <th>利用目的</th>
+                        <th>取り扱う情報</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google LLC（Firebase Firestore）</td>
+                        <td>夫婦同期機能を有効にした場合のデータ保存・同期</td>
+                        <td>育児記録、ニックネーム、絵文字アイコン、ペアコード</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Google LLC のプライバシーポリシーについては、下記をご参照ください。<br>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+            <p>Firebase の利用条件については、下記をご参照ください。<br>
+            <a href="https://firebase.google.com/terms" target="_blank" rel="noopener noreferrer">https://firebase.google.com/terms</a></p>
+
+            <h2>4. データの保管期間と削除</h2>
+
+            <h3>4-1. 端末内データ</h3>
+            <p>ユーザーがアプリをアンインストールした場合、または設定画面の「データを全削除」を実行した場合、端末内のすべてのデータは削除されます。</p>
+
+            <h3>4-2. 同期データ（Firestore）</h3>
+            <p>
+                夫婦同期機能を利用した場合、ペアを組んだメンバーの端末内データは Firestore にも保存されます。
+                これらのデータを削除したい場合は、設定画面の「夫婦同期を解除」または「データを全削除」を実行してください。当該操作により、Firestore 上のデータも削除されます。
+            </p>
+            <p>サーバー上に残ったままになっているペアデータがある場合、お問い合わせいただければ当方が手動で削除いたします。</p>
+
+            <h2>5. セキュリティ</h2>
+            <ul>
+                <li>同期データの送受信は、すべて HTTPS（TLS）で暗号化されます。</li>
+                <li>Firestore のセキュリティルールにより、同じペアコードを共有しているメンバーのみがそのペアのデータにアクセスできるよう制限しています。</li>
+                <li>6桁のペアコードは英数字の組み合わせから推測困難な値で生成されますが、第三者にコードを伝えないようご注意ください。</li>
+            </ul>
+
+            <h2>6. お子さまの個人情報の取り扱い</h2>
+            <p>
+                本アプリは、ユーザー（保護者）が育児タスクを記録するためのアプリであり、お子さまご本人の個人情報（名前、生年月日、写真、健康データ等）を入力する欄は設けておりません。育児記録は「ミルクの量」「おむつ替えの回数」など、行為そのものを記録するものであり、お子さまの個人を特定する情報は収集しません。
+            </p>
+
+            <h2>7. ユーザーの権利</h2>
+            <p>ユーザーは、本アプリに関連して当方が保有するご自身の情報について、以下の権利を有します。</p>
+            <ul>
+                <li>開示請求権</li>
+                <li>訂正請求権</li>
+                <li>削除請求権</li>
+                <li>利用停止請求権</li>
+            </ul>
+            <p>これらの権利を行使される場合は、下記のお問い合わせ先までご連絡ください。</p>
+
+            <h2>8. プライバシーポリシーの変更</h2>
+            <p>当方は、本ポリシーの内容を予告なく変更することがあります。重要な変更を行う場合は、アプリ内またはストアページにてお知らせいたします。変更後の最新版は、常に本ページにて公開いたします。</p>
+
+            <h2>9. お問い合わせ</h2>
+            <p>本ポリシーに関するお問い合わせは、下記までご連絡ください。</p>
+            <p>メールアドレス: <strong>nocs.information@gmail.com</strong><br>運営者: NoCS</p>
+
+            <div class="last-updated">
+                <p>最終更新日: 2026年5月13日</p>
+                <p><a href="terms-of-service.html">利用規約</a> | <a href="../hanbun-detail.html">Hanbun 詳細</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
