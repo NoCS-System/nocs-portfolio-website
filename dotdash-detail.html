@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOT DASH - アプリ詳細 | Portfolio</title>
+    <meta name="description" content="DOT DASH（ドットダッシュ） - タップで跳ねるドット絵スライムのワンタップ・アーケードゲーム">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .app-detail-hero {
+            background: linear-gradient(135deg, #6a3093 0%, #00b4d8 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+
+        .app-detail-hero .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .app-detail-hero .app-icon-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.15);
+            font-size: 3.5rem;
+            color: white;
+        }
+
+        .app-detail-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .app-detail-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo .logo-image {
+            height: 50px;
+            width: auto;
+            display: none;
+        }
+
+        .nav-logo .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-logo:has(.logo-image[src*="NoCS_logo.png"]) .logo-image {
+            display: block;
+        }
+
+        .nav-logo:has(.logo-image[src*="NoCS_logo.png"]) .logo-text {
+            display: none;
+        }
+
+        .app-info-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .app-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .app-description h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .app-description p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .app-features {
+            list-style: none;
+        }
+
+        .app-features li {
+            padding: 0.8rem 0;
+            color: #666;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .app-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00b4d8;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tech-specs h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .tech-category {
+            margin-bottom: 2rem;
+        }
+
+        .tech-category h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: #f0f0f0;
+            color: #666;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .status-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .status-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .status-badge.development {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #6a3093 0%, #00b4d8 100%);
+            width: 90%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .app-detail-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .app-info-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#apps" class="nav-link">Apps</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="index.html#apps" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        戻る
+    </a>
+
+    <!-- App Detail Hero -->
+    <section class="app-detail-hero">
+        <div class="container">
+            <div class="app-icon-placeholder">
+                <i class="fas fa-shoe-prints"></i>
+            </div>
+            <h1>DOT DASH</h1>
+            <p>タップで跳ねるドット絵スライム。ワンタップで遊べる爽快アーケードゲーム</p>
+            <div class="tech-tags">
+                <span class="tech-tag">Swift</span>
+                <span class="tech-tag">SwiftUI</span>
+                <span class="tech-tag">SpriteKit</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Info Section -->
+    <section class="app-info-section">
+        <div class="container">
+            <h2 class="section-title">アプリ詳細</h2>
+            <div class="app-info-grid">
+                <div class="app-description">
+                    <h3>ゲーム概要</h3>
+                    <p>
+                        「DOT DASH（ドットダッシュ）」は、ぷるぷる跳ねるドット絵スライムを操作する、シンプル＆奥深いワンタップ・アーケードゲームです。
+                        すべてのグラフィックを手描き感のあるピクセルアートで表現。昼から夜へと移ろう美しい世界を、片手でサクッと駆け抜けられます。
+                    </p>
+
+                    <h3>かんたん操作・奥深い手応え</h3>
+                    <p>
+                        タップでジャンプ、長押しでふんわり高くジャンプ（可変ジャンプ）、空中でタップするとダッシュ二段ジャンプ。
+                        操作はこれだけ。トゲを飛び越え、落とし穴を渡り、光るオーブを集めてコンボを繋ぐほどスピードは加速し、反射神経が試されます。
+                    </p>
+
+                    <h3>主な特徴</h3>
+                    <ul class="app-features">
+                        <li>【ワンタップ操作】タップ・長押し・空中タップだけの直感操作</li>
+                        <li>【コンボ＆スコア】オーブを連続で集めるほどコンボ倍率アップ、ハイスコアを狙える</li>
+                        <li>【オンラインランキング】Game Center リーダーボードで世界のハイスコアと競える</li>
+                        <li>【8種のスキン】貯めたコインでモス／アクア／エンバー／グレープ／キャンディ／シェイド／オーラム／ウィスプをアンロック</li>
+                        <li>【美しいピクセル世界】朝・昼・夕・夜と移ろう空、流れる雲、多層スクロール背景</li>
+                        <li>【モダンな演出】パーティクル・画面シェイク・スカッシュ＆ストレッチ・触覚フィードバック</li>
+                        <li>【アカウント不要】登録なし・ログインなしですぐ遊べる</li>
+                    </ul>
+
+                    <h3>こんな人におすすめ</h3>
+                    <ul class="app-features">
+                        <li>スキマ時間にサクッと遊べるゲームを探している</li>
+                        <li>ハイスコアをやり込みたい</li>
+                        <li>かわいいドット絵・レトロゲームが好き</li>
+                        <li>片手で遊べる手軽なゲームを探している</li>
+                    </ul>
+                </div>
+
+                <div class="tech-specs">
+                    <h3>技術仕様</h3>
+
+                    <div class="tech-category">
+                        <h4>プラットフォーム</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">iOS ネイティブ</span>
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">SwiftUI</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>ゲームエンジン / 描画</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">SpriteKit</span>
+                            <span class="tech-tag">ピクセルアート</span>
+                            <span class="tech-tag">パーティクル演出</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>オンライン機能</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Game Center</span>
+                            <span class="tech-tag">リーダーボード</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>広告 / 同意管理</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Google AdMob</span>
+                            <span class="tech-tag">UMP 同意フロー</span>
+                            <span class="tech-tag">App Tracking Transparency</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h4>データ管理</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">UserDefaults</span>
+                            <span class="tech-tag">ローカル保存</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Section -->
+    <section class="status-section">
+        <div class="container">
+            <div class="status-content">
+                <span class="status-badge development">リリース準備中</span>
+                <h3>開発状況</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p>現在リリース準備中のタイトルです。配信開始が整い次第、ストアリンクや詳細情報を追記予定です。</p>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                    <h4 style="margin-bottom: 1rem; color: #666;">法的文書</h4>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="dotdash/privacy-policy.html" class="btn btn-secondary" style="text-decoration: none;">
+                            <i class="fas fa-shield-alt"></i>
+                            プライバシーポリシー
+                        </a>
+                        <a href="dotdash/terms-of-service.html" class="btn btn-secondary" style="text-decoration: none;">
+                            <i class="fas fa-file-contract"></i>
+                            利用規約
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
