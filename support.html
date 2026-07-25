@@ -3,201 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サポート・お問い合わせ | NoCS AppDev</title>
-    <meta name="description" content="NoCS AppDev の各アプリに関するサポート・お問い合わせページ。ご質問・不具合のご報告を受け付けています。">
+    <title>サポート - FaiVE App | NoCS AppDev</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .support-container {
+        .support-content {
             max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
+            margin: 0 auto;
+            padding: 120px 20px 40px 20px;
+        }
+        .support-section {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        .support-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid #f0f0f0;
-        }
-        .support-header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.75rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .support-header p { color: #666; }
-        .contact-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
+            padding: 30px;
             border-radius: 12px;
-            padding: 1.75rem;
-            text-align: center;
-            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
         }
-        .contact-box h2 { color: #fff; margin-bottom: 0.75rem; font-size: 1.4rem; }
-        .contact-box a {
-            display: inline-block;
-            margin-top: 0.75rem;
-            padding: 0.75rem 1.5rem;
-            background: #fff;
-            color: #5a3fa0;
-            border-radius: 999px;
-            font-weight: 600;
-            text-decoration: none;
+        .support-section h2 {
+            color: #168aff;
+            border-bottom: 2px solid #168aff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
-        .contact-box small { display: block; margin-top: 1rem; opacity: 0.9; }
-        .faq-section { margin-bottom: 2.25rem; }
-        .faq-section h2 {
-            font-size: 1.3rem;
+        .support-section h3 {
             color: #333;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #eee;
-            margin-bottom: 1rem;
+            margin: 20px 0 10px 0;
         }
-        .faq-item { margin-bottom: 1.25rem; }
-        .faq-q { font-weight: 600; color: #444; margin-bottom: 0.4rem; }
-        .faq-q::before { content: "Q. "; color: #764ba2; }
-        .faq-a { color: #555; line-height: 1.75; padding-left: 1.4rem; }
-        .support-footer {
-            margin-top: 2.5rem;
-            padding-top: 1.5rem;
-            border-top: 2px solid #f0f0f0;
-            text-align: center;
-            color: #777;
-            font-size: 0.9rem;
+        .back-button {
+            display: inline-block;
+            background: #168aff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
         }
-        .support-footer a { color: #764ba2; }
-        @media (max-width: 600px) {
-            .support-container { margin: 1rem; padding: 1.25rem; }
-            .support-header h1 { font-size: 1.7rem; }
+        .back-button:hover {
+            background: #0056b3;
+        }
+        .contact-form {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #333;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #168aff;
+            box-shadow: 0 0 0 2px rgba(22, 138, 255, 0.1);
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: #168aff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #168aff;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+        }
+        .highlight-box {
+            background: #e3f2fd;
+            border: 1px solid #168aff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .highlight-box h4 {
+            color: #168aff;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="support-container">
-        <div class="support-header">
-            <h1>サポート・お問い合わせ</h1>
-            <p>NoCS AppDev が提供する各アプリのサポートページです。</p>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-text">NoCS AppDev</div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#apps" class="nav-link">Apps</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="support-content">
+            <a href="faive-detail.html" class="back-button">← FaiVE詳細に戻る</a>
+            
+            <div class="support-section">
+                <h1>FaiVE サポートセンター</h1>
+                <p>FaiVEアプリに関するご質問やサポートが必要な場合は、お気軽にお問い合わせください。</p>
+            </div>
+
+            <div class="support-section">
+                <h2>よくある質問（FAQ）</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: FaiVEアプリの使い方を教えてください</div>
+                    <div class="faq-answer">
+                        A: FaiVEは5秒で日記を書けるシンプルなアプリです。感情レベルを選択し、日記の内容を入力するだけで、AIがあなたの気持ちに寄り添った返信を生成します。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 日記データはどこに保存されますか？</div>
+                    <div class="faq-answer">
+                        A: 日記データはお使いのデバイス内（ローカルストレージ）に保存されます。また、iCloud等のクラウドサービスとの同期も可能です。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: AIの返信はどのように生成されますか？</div>
+                    <div class="faq-answer">
+                        A: GoogleのGemini APIを使用して、あなたの日記内容と感情データを分析し、適切な返信を生成します。個人を特定できる情報は含まれません。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: プライバシーは保護されていますか？</div>
+                    <div class="faq-answer">
+                        A: はい、ユーザーのプライバシーを最優先に考えています。詳細は<a href="privacy-policy.html">プライバシーポリシー</a>をご確認ください。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: アプリがクラッシュする場合の対処法</div>
+                    <div class="faq-answer">
+                        A: アプリを再起動するか、デバイスを再起動してください。問題が続く場合は、お問い合わせフォームからご連絡ください。
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-section">
+                <h2>お問い合わせ</h2>
+                <p>上記のFAQで解決しない場合は、以下のフォームからお問い合わせください。</p>
+                
+                <div class="contact-form">
+                    <form action="#" method="POST" id="supportForm">
+                        <div class="form-group">
+                            <label for="name">お名前 *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">メールアドレス *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">件名 *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">選択してください</option>
+                                <option value="bug">バグ報告</option>
+                                <option value="feature">機能要望</option>
+                                <option value="usage">使い方について</option>
+                                <option value="privacy">プライバシーについて</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 *</label>
+                            <textarea id="message" name="message" placeholder="詳細をお聞かせください" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">送信する</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="support-section">
+                <h2>その他のサポート情報</h2>
+                
+                <div class="highlight-box">
+                    <h4>📱 アプリ情報</h4>
+                    <p><strong>アプリ名:</strong> FaiVE - 5秒で日記アプリ</p>
+                    <p><strong>バージョン:</strong> 1.0.0</p>
+                    <p><strong>対応OS:</strong> iOS 14.0以上、Android 8.0以上</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>🔗 関連リンク</h4>
+                    <p><a href="privacy-policy.html">プライバシーポリシー</a></p>
+                    <p><a href="faive-detail.html">FaiVE詳細ページ</a></p>
+                </div>
+            </div>
         </div>
+    </main>
 
-        <div class="contact-box">
-            <h2><i class="fas fa-envelope"></i> お問い合わせ</h2>
-            <p>ご質問・不具合のご報告・ご要望は、こちらのメールアドレスまでお送りください。</p>
-            <a href="mailto:nocs.information@gmail.com">nocs.information@gmail.com</a>
-            <small>
-                不具合のご報告の際は、可能であれば「アプリ名」「お使いの端末(例: iPhone SE)」「iOSのバージョン」「どの操作をしたときに起きたか」をあわせてお知らせいただけると、原因の特定が早くなります。
-            </small>
-        </div>
-
-        <div class="faq-section">
-            <h2>よくあるご質問 — 不具合について</h2>
-
-            <div class="faq-item">
-                <div class="faq-q">画面をタップしても反応しなくなりました</div>
-                <div class="faq-a">
-                    お手数ですが、いったんアプリを完全に終了してから再度起動してください。多くの場合これで操作できるようになります。
-                    セーブデータは端末内に保存されているため、アプリを終了しても進行状況は失われません。
-                    再起動しても改善しない場合は、上記のメールアドレスまでご連絡ください。
-                </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-text">NoCS AppDev</div>
             </div>
-
-            <div class="faq-item">
-                <div class="faq-q">広告が表示されません / 広告のボタンが見つかりません</div>
-                <div class="faq-a">
-                    画面サイズの小さい端末では、ボタンが画面の下側に隠れている場合があります。画面を下方向にスクロールしてご確認ください。
-                    また、通信環境が不安定な場合は広告の読み込みに失敗することがあります。しばらく時間をおいてからお試しください。
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q">表示が英語になってしまいました</div>
-                <div class="faq-a">
-                    端末の言語設定に応じて表示言語が切り替わる仕様のアプリがあります。
-                    意図せず英語表示になってしまう場合は不具合の可能性がありますので、アプリ名とあわせてご連絡ください。
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q">アプリが進行できない状態になりました</div>
-                <div class="faq-a">
-                    発生した画面と、その直前に行った操作をお知らせください。再現手順が分かると修正が早くなります。
-                </div>
+            <div class="footer-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#apps">Apps</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <a href="support.html">サポート</a>
             </div>
         </div>
-
-        <div class="faq-section">
-            <h2>よくあるご質問 — データについて</h2>
-
-            <div class="faq-item">
-                <div class="faq-q">機種変更をしたらデータを引き継げますか？</div>
-                <div class="faq-a">
-                    多くのアプリでは、セーブデータをお使いの端末内に保存しています。この場合、別の端末へ自動で引き継ぐことはできず、
-                    アプリを削除するとセーブデータも削除されますのでご注意ください。
-                    データの共有・同期に対応しているアプリについては、アプリ内でご案内しています。
-                    お使いのアプリについて確認したい場合は、アプリ名を添えてお問い合わせください。
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q">アカウント登録は必要ですか？</div>
-                <div class="faq-a">
-                    多くのアプリでは、アカウントの作成やログインなしでご利用いただけます。
-                    データの共有など、アカウントが必要な機能があるアプリについてはアプリ内でご案内しています。
-                    詳しくは各アプリのプライバシーポリシーをご確認いただくか、お問い合わせください。
-                </div>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NoCS AppDev. All rights reserved.</p>
         </div>
+    </footer>
 
-        <div class="faq-section">
-            <h2>よくあるご質問 — 広告・課金について</h2>
-
-            <div class="faq-item">
-                <div class="faq-q">広告は必ず見なければいけませんか？</div>
-                <div class="faq-a">
-                    いいえ。ボーナスを受け取るための動画広告は、すべて「見たいときにご自身で選んで再生する」形式(リワード広告)です。
-                    広告を見なくてもゲームを進めていただけます。
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q">課金は必要ですか？</div>
-                <div class="faq-a">
-                    いいえ。アプリ内課金がある場合も任意であり、購入しなくても進行に支障はありません。
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q">購入したアイテムが反映されません / 購入を復元したい</div>
-                <div class="faq-a">
-                    アプリ内の設定画面にある「購入を復元」をお試しください。それでも反映されない場合は、
-                    ご購入時のレシート(App Store から届くメール)の内容とあわせてご連絡ください。
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-section">
-            <h2>ご要望・ご意見</h2>
-            <div class="faq-item">
-                <div class="faq-a" style="padding-left:0;">
-                    「こういう機能が欲しい」「ここが遊びにくい」といったご意見も歓迎しています。
-                    いただいたご要望は今後のアップデートを検討する際の参考にさせていただいています。
-                    上記のメールアドレスまでお気軽にお送りください。
-                </div>
-            </div>
-        </div>
-
-        <div class="support-footer">
-            <p>
-                <a href="index.html">NoCS AppDev トップページ</a>
-            </p>
-            <p>各アプリのプライバシーポリシー・利用規約は、それぞれのアプリ詳細ページに掲載しています。</p>
-        </div>
-    </div>
+    <script src="script.js"></script>
+    <script>
+        // サポートフォームの処理
+        document.getElementById('supportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // フォームデータの取得
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // 簡単なバリデーション
+            if (!name || !email || !subject || !message) {
+                alert('すべての項目を入力してください。');
+                return;
+            }
+            
+            // 送信完了メッセージ（実際の送信処理は実装が必要）
+            alert('お問い合わせありがとうございます。\n内容を確認次第、ご連絡いたします。');
+            
+            // フォームをリセット
+            this.reset();
+        });
+    </script>
 </body>
 </html>
