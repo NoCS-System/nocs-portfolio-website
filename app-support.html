@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サポート・お問い合わせ | NoCS AppDev</title>
+    <meta name="description" content="NoCS AppDev の各アプリに関するサポート・お問い合わせページ。ご質問・不具合のご報告を受け付けています。">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .support-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .support-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .support-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .support-header p { color: #666; }
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border-radius: 12px;
+            padding: 1.75rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .contact-box h2 { color: #fff; margin-bottom: 0.75rem; font-size: 1.4rem; }
+        .contact-box a {
+            display: inline-block;
+            margin-top: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            background: #fff;
+            color: #5a3fa0;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .contact-box small { display: block; margin-top: 1rem; opacity: 0.9; }
+        .faq-section { margin-bottom: 2.25rem; }
+        .faq-section h2 {
+            font-size: 1.3rem;
+            color: #333;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 1rem;
+        }
+        .faq-item { margin-bottom: 1.25rem; }
+        .faq-q { font-weight: 600; color: #444; margin-bottom: 0.4rem; }
+        .faq-q::before { content: "Q. "; color: #764ba2; }
+        .faq-a { color: #555; line-height: 1.75; padding-left: 1.4rem; }
+        .support-footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #f0f0f0;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        .support-footer a { color: #764ba2; }
+        @media (max-width: 600px) {
+            .support-container { margin: 1rem; padding: 1.25rem; }
+            .support-header h1 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="support-container">
+        <div class="support-header">
+            <h1>サポート・お問い合わせ</h1>
+            <p>NoCS AppDev が提供する各アプリのサポートページです。</p>
+        </div>
+
+        <div class="contact-box">
+            <h2><i class="fas fa-envelope"></i> お問い合わせ</h2>
+            <p>ご質問・不具合のご報告・ご要望は、こちらのメールアドレスまでお送りください。</p>
+            <a href="mailto:nocs.information@gmail.com">nocs.information@gmail.com</a>
+            <small>
+                不具合のご報告の際は、可能であれば「アプリ名」「お使いの端末(例: iPhone SE)」「iOSのバージョン」「どの操作をしたときに起きたか」をあわせてお知らせいただけると、原因の特定が早くなります。
+            </small>
+        </div>
+
+        <div class="faq-section">
+            <h2>よくあるご質問 — 不具合について</h2>
+
+            <div class="faq-item">
+                <div class="faq-q">画面をタップしても反応しなくなりました</div>
+                <div class="faq-a">
+                    お手数ですが、いったんアプリを完全に終了してから再度起動してください。多くの場合これで操作できるようになります。
+                    セーブデータは端末内に保存されているため、アプリを終了しても進行状況は失われません。
+                    再起動しても改善しない場合は、上記のメールアドレスまでご連絡ください。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">広告が表示されません / 広告のボタンが見つかりません</div>
+                <div class="faq-a">
+                    画面サイズの小さい端末では、ボタンが画面の下側に隠れている場合があります。画面を下方向にスクロールしてご確認ください。
+                    また、通信環境が不安定な場合は広告の読み込みに失敗することがあります。しばらく時間をおいてからお試しください。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">表示が英語になってしまいました</div>
+                <div class="faq-a">
+                    端末の言語設定に応じて表示言語が切り替わる仕様のアプリがあります。
+                    意図せず英語表示になってしまう場合は不具合の可能性がありますので、アプリ名とあわせてご連絡ください。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">アプリが進行できない状態になりました</div>
+                <div class="faq-a">
+                    発生した画面と、その直前に行った操作をお知らせください。再現手順が分かると修正が早くなります。
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>よくあるご質問 — データについて</h2>
+
+            <div class="faq-item">
+                <div class="faq-q">機種変更をしたらデータを引き継げますか？</div>
+                <div class="faq-a">
+                    多くのアプリでは、セーブデータをお使いの端末内に保存しています。この場合、別の端末へ自動で引き継ぐことはできず、
+                    アプリを削除するとセーブデータも削除されますのでご注意ください。
+                    データの共有・同期に対応しているアプリについては、アプリ内でご案内しています。
+                    お使いのアプリについて確認したい場合は、アプリ名を添えてお問い合わせください。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">アカウント登録は必要ですか？</div>
+                <div class="faq-a">
+                    多くのアプリでは、アカウントの作成やログインなしでご利用いただけます。
+                    データの共有など、アカウントが必要な機能があるアプリについてはアプリ内でご案内しています。
+                    詳しくは各アプリのプライバシーポリシーをご確認いただくか、お問い合わせください。
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>よくあるご質問 — 広告・課金について</h2>
+
+            <div class="faq-item">
+                <div class="faq-q">広告は必ず見なければいけませんか？</div>
+                <div class="faq-a">
+                    いいえ。ボーナスを受け取るための動画広告は、すべて「見たいときにご自身で選んで再生する」形式(リワード広告)です。
+                    広告を見なくてもゲームを進めていただけます。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">課金は必要ですか？</div>
+                <div class="faq-a">
+                    いいえ。アプリ内課金がある場合も任意であり、購入しなくても進行に支障はありません。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">購入したアイテムが反映されません / 購入を復元したい</div>
+                <div class="faq-a">
+                    アプリ内の設定画面にある「購入を復元」をお試しください。それでも反映されない場合は、
+                    ご購入時のレシート(App Store から届くメール)の内容とあわせてご連絡ください。
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>ご要望・ご意見</h2>
+            <div class="faq-item">
+                <div class="faq-a" style="padding-left:0;">
+                    「こういう機能が欲しい」「ここが遊びにくい」といったご意見も歓迎しています。
+                    いただいたご要望は今後のアップデートを検討する際の参考にさせていただいています。
+                    上記のメールアドレスまでお気軽にお送りください。
+                </div>
+            </div>
+        </div>
+
+        <div class="support-footer">
+            <p>
+                <a href="index.html">NoCS AppDev トップページ</a>
+            </p>
+            <p>各アプリのプライバシーポリシー・利用規約は、それぞれのアプリ詳細ページに掲載しています。</p>
+        </div>
+    </div>
+</body>
+</html>
