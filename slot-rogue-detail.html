@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Rogue - アプリ詳細 | NoCS AppDev</title>
+    <meta name="description" content="Slot Rogue（スロットローグ） - スロットの高揚感とローグライトの戦略性を組み合わせた、ひとり用ゲーム">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .app-detail-hero { background: linear-gradient(135deg, #10092d 0%, #35206d 52%, #9d6413 100%); padding: 120px 0 80px; color: white; text-align: center; }
+        .app-detail-hero .app-icon { width: 120px; height: 120px; border-radius: 25px; box-shadow: 0 8px 28px rgba(0, 0, 0, .42); margin-bottom: 2rem; }
+        .app-detail-hero h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 700; }
+        .app-detail-hero p { font-size: 1.3rem; opacity: .92; margin-bottom: 2rem; }
+        .back-button { position: fixed; top: 100px; left: 20px; background: rgba(255,255,255,.92); border: none; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-weight: 600; color: #333; text-decoration: none; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,.1); transition: all .3s ease; z-index: 100; }
+        .back-button:hover { background: white; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.15); }
+        .nav-logo { display: flex; align-items: center; gap: .5rem; }
+        .nav-logo .logo-image { height: 50px; width: auto; display: none; }
+        .nav-logo .logo-text { font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .nav-logo:has(.logo-image[src*="NoCS_logo.png"]) .logo-image { display: block; }
+        .nav-logo:has(.logo-image[src*="NoCS_logo.png"]) .logo-text { display: none; }
+        .app-info-section { padding: 80px 0; background: white; }
+        .app-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
+        .app-description h3, .tech-specs h3 { font-size: 1.8rem; margin-bottom: 1.5rem; color: #333; }
+        .app-description p { color: #666; line-height: 1.8; margin-bottom: 1.5rem; }
+        .app-features { list-style: none; }
+        .app-features li { padding: .8rem 0; color: #666; position: relative; padding-left: 2rem; }
+        .app-features li::before { content: '✓'; position: absolute; left: 0; color: #9d6413; font-weight: bold; font-size: 1.2rem; }
+        .tech-category { margin-bottom: 2rem; }
+        .tech-category h4 { font-size: 1.2rem; margin-bottom: 1rem; color: #333; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; }
+        .tech-specs .tech-tags { justify-content: flex-start; }
+        .tech-tag { background: #f0f0f0; color: #666; padding: .5rem 1rem; border-radius: 20px; font-size: .9rem; font-weight: 500; }
+        .status-section { background: #f8f9fa; padding: 80px 0; }
+        .status-content { text-align: center; max-width: 600px; margin: 0 auto; }
+        .status-badge { display: inline-block; padding: .8rem 2rem; border-radius: 25px; font-size: 1.1rem; font-weight: 600; margin-bottom: 2rem; }
+        .status-badge.development { background: #fff3e0; color: #9c5b00; }
+        .progress-bar { width: 100%; height: 8px; background: #e9ecef; border-radius: 4px; overflow: hidden; margin-bottom: 1rem; }
+        .progress-fill { height: 100%; background: linear-gradient(135deg,#35206d 0%,#c68a22 100%); width: 90%; border-radius: 4px; }
+        @media (max-width: 768px) { .app-detail-hero h1 { font-size: 2.5rem; } .app-info-grid { grid-template-columns: 1fr; gap: 2rem; } .back-button { top: 80px; left: 10px; padding: 10px 15px; font-size: .9rem; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar"><div class="nav-container"><div class="nav-logo"><img src="images/NoCS_logo.png" alt="NoCS" class="logo-image"><span class="logo-text">AppDev</span></div><div class="nav-menu"><a href="index.html#home" class="nav-link">Home</a><a href="index.html#about" class="nav-link">About</a><a href="index.html#apps" class="nav-link">Apps</a><a href="index.html#skills" class="nav-link">Skills</a><a href="index.html#contact" class="nav-link">Contact</a></div></div></nav>
+    <a href="index.html#apps" class="back-button"><i class="fas fa-arrow-left"></i>戻る</a>
+    <section class="app-detail-hero"><div class="container"><img src="images/slot-rogue/icon.png" alt="Slot Rogue アイコン" class="app-icon"><h1>Slot Rogue</h1><p>止める一撃で運命を変える、ひとり用スロット・ローグライト</p><div class="tech-tags"><span class="tech-tag">React Native</span><span class="tech-tag">Expo</span><span class="tech-tag">TypeScript</span></div></div></section>
+    <section class="app-info-section"><div class="container"><h2 class="section-title">アプリ詳細</h2><div class="app-info-grid"><div class="app-description"><h3>ゲーム概要</h3><p>「Slot Rogue」は、スロットのリールを止める緊張感と、毎回違う選択で攻略を組み立てるローグライトの面白さを組み合わせた、ひとり用ゲームです。ゲーム内のコインや報酬はすべてアプリ内だけで使うもので、換金・景品・現実のギャンブル要素はありません。</p><h3>主な特徴</h3><ul class="app-features"><li>3リールを止めて役を狙う、シンプルで気持ちよい操作</li><li>シンボルや演出の組み合わせで変化する一発逆転の展開</li><li>遺物・強化・ルート選択で、自分だけの攻略を組み立てるローグライト性</li><li>ゴールドの祝福を狙う、派手で爽快なボーナス演出</li><li>登録・ログイン不要。セーブデータは原則として端末内に保存</li><li>ゲーム進行を妨げる強制広告なし。追加報酬がほしいときだけ任意のリワード広告を視聴可能</li></ul><h3>サポート</h3><p>不具合の報告やご意見は、端末・iOSバージョン・発生手順を添えて、サイト下部の<a href="index.html#contact">お問い合わせ窓口</a>からお送りください。</p><h3>よくある質問</h3><p><strong>課金や換金はありますか？</strong><br>ありません。ゲーム内のコイン、ポイント、報酬に現金・景品・換金可能な価値はありません。</p><p><strong>広告は必ず表示されますか？</strong><br>いいえ。追加報酬を選んだ場合のみ、任意でリワード広告を視聴できます。</p></div><div class="tech-specs"><h3>技術仕様</h3><div class="tech-category"><h4>プラットフォーム</h4><div class="tech-tags"><span class="tech-tag">iOS</span><span class="tech-tag">React Native</span><span class="tech-tag">Expo</span></div></div><div class="tech-category"><h4>ゲームシステム</h4><div class="tech-tags"><span class="tech-tag">スロット演出</span><span class="tech-tag">ローグライト</span><span class="tech-tag">ローカルセーブ</span></div></div><div class="tech-category"><h4>広告 / 同意管理</h4><div class="tech-tags"><span class="tech-tag">Google AdMob</span><span class="tech-tag">リワード広告のみ</span><span class="tech-tag">App Tracking Transparency</span></div></div></div></div></div></section>
+    <section class="status-section"><div class="container"><div class="status-content"><span class="status-badge development">リリース準備中</span><h3>開発状況</h3><div class="progress-bar"><div class="progress-fill"></div></div><p>現在リリース準備中のタイトルです。配信開始が整い次第、ストアリンクを追記します。</p><div style="margin-top:2rem;padding-top:2rem;border-top:1px solid #eee;"><h4 style="margin-bottom:1rem;color:#666;">法的文書</h4><div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"><a href="slot-rogue/privacy-policy.html" class="btn btn-secondary" style="text-decoration:none;"><i class="fas fa-shield-alt"></i>プライバシーポリシー</a><a href="slot-rogue/terms-of-service.html" class="btn btn-secondary" style="text-decoration:none;"><i class="fas fa-file-contract"></i>利用規約</a></div></div></div></div></section>
+    <script src="script.js"></script>
+</body>
+</html>
