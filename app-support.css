@@ -1,0 +1,17 @@
+.support-hero { padding: 128px 20px 70px; color: #fff; text-align: center; background: var(--app-gradient, linear-gradient(135deg, #343a40, #6c757d)); }
+.support-hero .app-mark { width: 112px; height: 112px; margin: 0 auto 22px; border-radius: 28px; display: grid; place-items: center; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.32); box-shadow: 0 14px 30px rgba(0,0,0,.25); font-size: 3rem; }
+.support-hero h1 { font-size: clamp(2.25rem, 7vw, 3.6rem); margin: 0 0 12px; }
+.support-hero p { max-width: 700px; margin: auto; font-size: 1.15rem; line-height: 1.8; opacity: .94; }
+.support-main { max-width: 1000px; margin: auto; padding: 62px 20px 82px; }
+.support-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(250px, .8fr); gap: 34px; }
+.support-card { background: #fff; border-radius: 18px; padding: 30px; box-shadow: 0 10px 28px rgba(0,0,0,.08); }
+.support-card h2 { margin: 0 0 16px; color: #272343; font-size: 1.55rem; }
+.support-card h3 { margin: 24px 0 10px; color: #3f3d56; }
+.support-card p, .support-card li { color: #5b5b68; line-height: 1.85; }
+.support-card ul { margin: 0; padding-left: 1.25rem; }
+.support-card a { color: #5650b8; font-weight: 700; }
+.support-note { margin-top: 24px; padding: 18px 20px; border-left: 4px solid #7873f5; background: #f7f7ff; color: #5b5b68; border-radius: 0 12px 12px 0; line-height: 1.75; }
+.support-back { position: fixed; top: 100px; left: 20px; z-index: 10; padding: 11px 18px; border-radius: 999px; background: rgba(255,255,255,.94); color: #333; text-decoration: none; font-weight: 700; box-shadow: 0 4px 14px rgba(0,0,0,.12); }
+.support-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.support-meta span { padding: 6px 11px; border-radius: 999px; background: #f0efff; color: #514ba9; font-weight: 700; font-size: .85rem; }
+@media (max-width: 760px) { .support-hero { padding-top: 108px; } .support-grid { grid-template-columns: 1fr; } .support-card { padding: 24px; } .support-back { top: 78px; left: 12px; } }
