@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - こんだて | NoCS AppDev</title>
+    <meta name="description" content="こんだて のプライバシーポリシー">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .policy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+            line-height: 1.8;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .policy-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #e88ca5 0%, #7ba4d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .policy-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .policy-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .policy-content h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #333;
+            border-bottom: 2px solid #e88ca5;
+            padding-bottom: 0.5rem;
+        }
+
+        .policy-content h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem;
+            color: #444;
+        }
+
+        .policy-content p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .policy-content ul, .policy-content ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .policy-content li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .policy-content strong {
+            color: #333;
+        }
+
+        .policy-content a {
+            color: #e88ca5;
+            text-decoration: underline;
+        }
+
+        .policy-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .policy-content table th,
+        .policy-content table td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+            color: #555;
+        }
+
+        .policy-content table th {
+            background: #f8f9fa;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .last-updated a {
+            color: #e88ca5;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .policy-container {
+                padding: 100px 15px 60px;
+            }
+
+            .policy-content {
+                padding: 2rem;
+            }
+
+            .back-button {
+                top: 80px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .policy-content table {
+                font-size: 0.85rem;
+            }
+
+            .policy-content table th,
+            .policy-content table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/NoCS_logo.png" alt="NoCS" class="logo-image">
+                <span class="logo-text">AppDev</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#apps" class="nav-link">Apps</a>
+                <a href="../index.html#skills" class="nav-link">Skills</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <a href="../index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        こんだて 詳細に戻る
+    </a>
+
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1 class="privacy-title">プライバシーポリシー</h1>
+        <p class="privacy-updated">最終更新日: 2026年8月12日</p>
+
+        <div class="privacy-section">
+          <p>
+            NoCS（以下「当方」といいます）は、iOS アプリ「こんだて」（以下「本アプリ」といいます）における
+            ユーザーのプライバシーを尊重し、個人情報の保護に関して下記の方針を定めます。
+          </p>
+          <div class="highlight-box">
+            <strong>本アプリは、ユーザーのいかなる情報も収集・送信しません。</strong>
+            本アプリはネットワーク通信を一切行わず、入力された内容はすべてお使いの端末の中だけに保存されます。
+          </div>
+        </div>
+
+        <div class="privacy-section">
+          <h2>1. 収集する情報</h2>
+          <h3>1-1. 端末内にのみ保存される情報</h3>
+          <p>本アプリは、ユーザーが入力した以下の情報を端末内にのみ保存します。当方のサーバーを含む外部には一切送信されません。</p>
+          <ul>
+            <li>各日付に入力された献立名</li>
+            <li>買い物リストの品目名と、購入済みかどうかの状態</li>
+          </ul>
+          <p>
+            これらは端末内の App Group 共有コンテナに JSON ファイルとして保存され、
+            本アプリ本体とホーム画面ウィジェットの間でのみ共有されます。
+            本アプリを削除すると、これらのデータも端末から削除されます。
+          </p>
+          <h3>1-2. 当方が収集しない情報</h3>
+          <p>本アプリは、以下の情報を<strong>一切収集しません</strong>。</p>
+          <ul>
+            <li>メールアドレス、電話番号、本名、住所、生年月日</li>
+            <li>写真、カメラ画像、マイク音声</li>
+            <li>位置情報、IPアドレス</li>
+            <li>連絡先、カレンダー、リマインダー</li>
+            <li>健康データ、医療データ</li>
+            <li>広告識別子（IDFA／GAID）</li>
+            <li>クラッシュレポート、利用統計データ</li>
+          </ul>
+        </div>
+
+        <div class="privacy-section">
+          <h2>2. 情報の利用目的</h2>
+          <p>
+            端末内に保存された献立と買い物リストは、本アプリの画面およびホーム画面ウィジェットに
+            表示する目的でのみ利用されます。当方がこれらの内容を閲覧・取得することはできません。
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>3. 第三者への提供</h2>
+          <p>
+            本アプリは外部にデータを送信しないため、第三者への提供は発生しません。
+            広告配信サービス、アクセス解析サービス、その他の外部SDKを一切組み込んでいません。
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>4. データの保管期間と削除</h2>
+          <p>
+            データは端末内に保存され、ユーザーが削除するまで保持されます。
+            個別の献立や買い物リストの項目はアプリ内でいつでも削除できます。
+            すべてのデータを消去したい場合は、本アプリを端末から削除してください。
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>5. セキュリティ</h2>
+          <p>
+            データは iOS のサンドボックス内（App Group 共有コンテナ）に保存され、
+            他のアプリからアクセスすることはできません。ネットワーク送信を行わないため、
+            通信経路上でデータが漏えいすることはありません。
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>6. お子さまの個人情報の取り扱い</h2>
+          <p>
+            本アプリは年齢を問わずご利用いただけますが、そもそも個人情報を収集しないため、
+            お子さまの個人情報を取得することもありません。
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>7. ユーザーの権利</h2>
+          <p>
+            本アプリのデータはすべてユーザーの端末内にあり、ユーザー自身がいつでも
+            閲覧・修正・削除できます。当方が保持するデータは存在しないため、
+            当方に対する開示・訂正・削除のご請求は必要ありません。
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>8. プライバシーポリシーの変更</h2>
+          <p>
+            本ポリシーは、法令の変更や本アプリの機能追加に応じて改定されることがあります。
+            重要な変更がある場合は、本ページにて告知します。
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>9. お問い合わせ</h2>
+          <p>
+            本ポリシーに関するお問い合わせは、下記までご連絡ください。<br>
+            <a href="mailto:nocs.information@gmail.com">nocs.information@gmail.com</a>
+          </p>
+        </div>
+      
+
+            <div class="last-updated">
+                <p>最終更新日: 2026年8月12日</p>
+                <p><a href="../index.html">NoCS AppDev</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
