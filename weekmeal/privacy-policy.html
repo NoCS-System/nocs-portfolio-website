@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - こんだて | NoCS AppDev</title>
-    <meta name="description" content="こんだて のプライバシーポリシー">
+    <title>「こんだて」プライバシーポリシー | NoCS AppDev</title>
+    <meta name="description" content="iOSアプリ「こんだて」のプライバシーポリシー">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -193,116 +193,115 @@
 
     <div class="policy-container">
         <div class="policy-header">
-            <h1 class="privacy-title">プライバシーポリシー</h1>
-        <p class="privacy-updated">最終更新日: 2026年8月12日</p>
-
-        <div class="privacy-section">
-          <p>
-            NoCS（以下「当方」といいます）は、iOS アプリ「こんだて」（以下「本アプリ」といいます）における
-            ユーザーのプライバシーを尊重し、個人情報の保護に関して下記の方針を定めます。
-          </p>
-          <div class="highlight-box">
-            <strong>本アプリは、ユーザーのいかなる情報も収集・送信しません。</strong>
-            本アプリはネットワーク通信を一切行わず、入力された内容はすべてお使いの端末の中だけに保存されます。
-          </div>
+            <h1 class="privacy-title">「こんだて」プライバシーポリシー</h1>
+            <p class="privacy-updated">最終更新日: 2026年8月25日</p>
         </div>
 
-        <div class="privacy-section">
-          <h2>1. 収集する情報</h2>
-          <h3>1-1. 端末内にのみ保存される情報</h3>
-          <p>本アプリは、ユーザーが入力した以下の情報を端末内にのみ保存します。当方のサーバーを含む外部には一切送信されません。</p>
-          <ul>
-            <li>各日付に入力された献立名</li>
-            <li>買い物リストの品目名と、購入済みかどうかの状態</li>
-          </ul>
-          <p>
-            これらは端末内の App Group 共有コンテナに JSON ファイルとして保存され、
-            本アプリ本体とホーム画面ウィジェットの間でのみ共有されます。
-            本アプリを削除すると、これらのデータも端末から削除されます。
-          </p>
-          <h3>1-2. 当方が収集しない情報</h3>
-          <p>本アプリは、以下の情報を<strong>一切収集しません</strong>。</p>
-          <ul>
-            <li>メールアドレス、電話番号、本名、住所、生年月日</li>
-            <li>写真、カメラ画像、マイク音声</li>
-            <li>位置情報、IPアドレス</li>
-            <li>連絡先、カレンダー、リマインダー</li>
-            <li>健康データ、医療データ</li>
-            <li>広告識別子（IDFA／GAID）</li>
-            <li>クラッシュレポート、利用統計データ</li>
-          </ul>
-        </div>
+        <div class="policy-content">
+            <p>NoCS（以下「当方」）は、iOSアプリ「こんだて」（以下「本アプリ」）におけるデータの取り扱いを、次のとおり説明します。</p>
 
-        <div class="privacy-section">
-          <h2>2. 情報の利用目的</h2>
-          <p>
-            端末内に保存された献立と買い物リストは、本アプリの画面およびホーム画面ウィジェットに
-            表示する目的でのみ利用されます。当方がこれらの内容を閲覧・取得することはできません。
-          </p>
-        </div>
+            <div class="privacy-section">
+                <h2>1. ユーザーが入力するデータ</h2>
+                <p>本アプリは、ユーザーが入力した次のデータを、端末内のApp Group共有コンテナに保存します。</p>
+                <ul>
+                    <li>各日付の献立名と作り置き内容</li>
+                    <li>買い物リストの品目名と購入済み状態</li>
+                </ul>
+                <p>これらは本アプリとホーム画面ウィジェットの間でのみ共有されます。当方のサーバーやGoogleの広告サービスへ送信せず、広告配信にも使用しません。当方が内容を閲覧・取得することもできません。</p>
+                <p>個別の献立や買い物項目はアプリ内で削除できます。すべて削除する場合は、本アプリを端末から削除してください。</p>
+            </div>
 
-        <div class="privacy-section">
-          <h2>3. 第三者への提供</h2>
-          <p>
-            本アプリは外部にデータを送信しないため、第三者への提供は発生しません。
-            広告配信サービス、アクセス解析サービス、その他の外部SDKを一切組み込んでいません。
-          </p>
-        </div>
+            <div class="privacy-section">
+                <h2>2. 広告配信と同意管理で処理される可能性があるデータ</h2>
+                <p>本アプリは、画面下部のバナー広告の配信にGoogle AdMob（Google Mobile Ads SDK）を、プライバシー選択肢の管理にGoogle User Messaging Platform（UMP）を使用します。これらのSDKは、端末・地域・同意状態・SDK設定に応じて、次のデータを自動的に収集し、Googleへ送信する場合があります。</p>
+                <ul>
+                    <li>IPアドレス、およびIPアドレスから推定されるおおよその位置情報</li>
+                    <li>端末またはアプリに関する識別子（広告識別子、またはアプリ・デベロッパー単位の識別子など）</li>
+                    <li>表示された広告、広告への反応などの広告データ</li>
+                    <li>アプリの起動、広告の表示・操作などの製品操作情報</li>
+                    <li>クラッシュログ、起動時間、停止、消費電力などのパフォーマンス情報</li>
+                    <li>その他の診断情報</li>
+                    <li>同意状態およびプライバシー選択肢</li>
+                </ul>
+                <p>これらのデータは種類により、端末・アプリ識別子と関連付けられる場合があります。実際に処理されるデータは、端末、地域、ユーザーの選択、Google SDKの仕様により異なります。</p>
+            </div>
 
-        <div class="privacy-section">
-          <h2>4. データの保管期間と削除</h2>
-          <p>
-            データは端末内に保存され、ユーザーが削除するまで保持されます。
-            個別の献立や買い物リストの項目はアプリ内でいつでも削除できます。
-            すべてのデータを消去したい場合は、本アプリを端末から削除してください。
-          </p>
-        </div>
+            <div class="privacy-section">
+                <h2>3. 利用目的</h2>
+                <p>広告SDK由来のデータは、次の目的で利用される場合があります。</p>
+                <ul>
+                    <li>バナー広告の配信、表示回数の調整および配信結果の測定</li>
+                    <li>広告・アプリの利用状況の集計および分析</li>
+                    <li>不正利用の防止、セキュリティおよび障害の診断</li>
+                    <li>SDKと広告配信品質の維持・改善</li>
+                    <li>法令や地域に応じた同意状態・プライバシー選択肢の適用</li>
+                </ul>
+            </div>
 
-        <div class="privacy-section">
-          <h2>5. セキュリティ</h2>
-          <p>
-            データは iOS のサンドボックス内（App Group 共有コンテナ）に保存され、
-            他のアプリからアクセスすることはできません。ネットワーク送信を行わないため、
-            通信経路上でデータが漏えいすることはありません。
-          </p>
-        </div>
+            <div class="privacy-section">
+                <h2>4. 広告とプライバシー設定</h2>
+                <ul>
+                    <li>本アプリは、App Tracking Transparency（ATT）による追跡許可を要求しません。</li>
+                    <li>本アプリは、広告パーソナライズを無効にした設定で、非パーソナライズ広告をリクエストします。</li>
+                    <li>広告配信元によるpublisher first-party IDの利用を無効にしています。</li>
+                    <li>広告コンテンツの最大レーティングをGeneral（G）に設定しています。</li>
+                    <li>UMPが同意確認を必要と判断した場合は、広告をリクエストする前に選択画面を表示します。</li>
+                    <li>UMPがプライバシー選択肢への入口を必要と判断した場合は、アプリ上部の「プライバシー」から選択を変更できます。</li>
+                </ul>
+                <p>非パーソナライズ広告でも、表示頻度の調整、集計レポート、不正防止などのために、Cookieに相当する端末内ストレージやモバイル識別子が使用される場合があります。ATTを要求しないことや広告パーソナライズを無効にすることは、広告SDKによるすべてのデータ処理がなくなることを意味しません。</p>
+            </div>
 
-        <div class="privacy-section">
-          <h2>6. お子さまの個人情報の取り扱い</h2>
-          <p>
-            本アプリは年齢を問わずご利用いただけますが、そもそも個人情報を収集しないため、
-            お子さまの個人情報を取得することもありません。
-          </p>
-        </div>
+            <div class="privacy-section">
+                <h2>5. 外部サービス</h2>
+                <p>広告配信・同意管理に伴うデータは、Google LLCにより処理される場合があります。Googleによるデータの取り扱いは、次のページをご確認ください。</p>
+                <ul>
+                    <li><a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">Google プライバシーポリシー</a></li>
+                    <li><a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener noreferrer">Google のサービスを使用するサイトやアプリから収集した情報の利用</a></li>
+                    <li><a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google 広告設定</a></li>
+                </ul>
+                <p>当方は、ユーザーが入力した献立・買い物データをGoogleへ提供しません。</p>
+            </div>
 
-        <div class="privacy-section">
-          <h2>7. ユーザーの権利</h2>
-          <p>
-            本アプリのデータはすべてユーザーの端末内にあり、ユーザー自身がいつでも
-            閲覧・修正・削除できます。当方が保持するデータは存在しないため、
-            当方に対する開示・訂正・削除のご請求は必要ありません。
-          </p>
-        </div>
+            <div class="privacy-section">
+                <h2>6. 保存期間と削除</h2>
+                <p>献立・買い物データはユーザーの端末内に保存され、ユーザーがアプリ内で削除するか、本アプリを端末から削除するまで保持されます。当方のサーバーにはその複製を保存しません。</p>
+                <p>広告・診断・同意関連データの保存期間と削除方法は、Googleのサービス、ユーザーの選択およびGoogleのポリシーに従います。当方はGoogle側の保存期間を独自に設定できません。当方が参照できるAdMobの集計レポートは、ユーザーが入力した献立・買い物データとは結び付きません。</p>
+            </div>
 
-        <div class="privacy-section">
-          <h2>8. プライバシーポリシーの変更</h2>
-          <p>
-            本ポリシーは、法令の変更や本アプリの機能追加に応じて改定されることがあります。
-            重要な変更がある場合は、本ページにて告知します。
-          </p>
-        </div>
+            <div class="privacy-section">
+                <h2>7. ユーザーによる管理</h2>
+                <ul>
+                    <li>献立・買い物データは、アプリ内で閲覧・修正・削除できます。</li>
+                    <li>UMPが入口を必要とする場合は、アプリ上部の「プライバシー」から広告に関する選択を変更できます。</li>
+                    <li>Googleによる広告情報の利用は、上記のGoogle広告設定などから管理できます。</li>
+                </ul>
+            </div>
 
-        <div class="privacy-section">
-          <h2>9. お問い合わせ</h2>
-          <p>
-            本ポリシーに関するお問い合わせは、下記までご連絡ください。<br>
-            <a href="mailto:nocs.information@gmail.com">nocs.information@gmail.com</a>
-          </p>
-        </div>
-      
+            <div class="privacy-section">
+                <h2>8. お子さまの利用</h2>
+                <p>本アプリは、氏名、年齢、連絡先を入力する機能を設けていません。広告コンテンツの最大レーティングをGeneral（G）に設定しています。広告SDKに伴うデータ処理は、年齢にかかわらず本ポリシーの説明が適用される場合があります。</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>9. セキュリティ</h2>
+                <p>献立・買い物データはiOSのApp Group共有コンテナに保存されます。広告・同意管理の通信については、Apple、Googleおよび各サービスが提供するセキュリティ機能を利用します。</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>10. 本ポリシーの変更</h2>
+                <p>本ポリシーは、機能、SDK、法令またはサービス仕様の変更に応じて改定する場合があります。変更後の内容と更新日は本ページに掲載します。</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>11. お問い合わせ</h2>
+                <p>
+                    本ポリシーに関するお問い合わせ先:<br>
+                    <a href="mailto:nocs.information@gmail.com">nocs.information@gmail.com</a>
+                </p>
+            </div>
 
             <div class="last-updated">
-                <p>最終更新日: 2026年8月12日</p>
+                <p>最終更新日: 2026年8月25日</p>
                 <p><a href="../index.html">NoCS AppDev</a></p>
             </div>
         </div>
