@@ -6,7 +6,7 @@
     <title>プライバシーポリシー - 無限放置ドット勇者 | NoCS AppDev</title>
     <meta name="description" content="無限放置ドット勇者：レアドロップで最強 のプライバシーポリシー">
     <link rel="stylesheet" href="../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .policy-container {
@@ -183,7 +183,7 @@
         <div class="policy-header">
             <h1>プライバシーポリシー</h1>
             <p>無限放置ドット勇者：レアドロップで最強</p>
-            <p>最終更新日: 2026年6月17日</p>
+            <p>最終更新日: 2026年9月2日</p>
         </div>
 
         <div class="policy-content">
@@ -195,43 +195,83 @@
                 <li>お問い合わせ: <strong>nocs.information@gmail.com</strong></li>
             </ul>
 
-            <h2>2. 収集しない情報</h2>
-            <p>本アプリは、アカウント登録を必要としません。氏名・メールアドレス・電話番号・位置情報などの個人を直接特定する情報を、当方が独自に収集・保存することはありません。</p>
-            <p>ゲームの進行状況（セーブデータ）は、お使いの<strong>端末内にのみ</strong>保存され、当方のサーバーへ送信されることはありません。</p>
+            <h2>2. 端末内に保存するゲームデータ</h2>
+            <p>本アプリは、氏名・メールアドレス・電話番号を使ったアカウント登録を必要としません。通常のゲーム進行、所持品、設定、広告スキップパスの利用状態などのセーブデータは、原則としてお使いの端末内に保存されます。</p>
+            <p>ただし、次項のランキング機能を提供するため、ゲーム進行の一部と匿名識別子をGoogle Firebaseへ送信します。端末内のセーブデータ全体を当方のサーバーへ送信するものではありません。</p>
 
-            <h2>3. 広告について（第三者配信）</h2>
-            <p>本アプリは、無料提供のため Google の広告サービス <strong>Google AdMob</strong> を利用した<strong>リワード（動画）広告</strong>を表示します。広告の視聴は任意です。</p>
-            <p>広告配信のため、AdMob および Google は、広告識別子（IDFA等）・デバイス情報・広告の表示や操作に関する情報などを取得・利用する場合があります。これらの取り扱いは Google のポリシーに従います。</p>
+            <h2>3. 匿名認証とランキング</h2>
+            <p>本アプリは、総合・週間ランキング、ランキング報酬、不正利用の抑止および通報機能のため、Google Firebase AuthenticationとCloud Firestoreを利用します。起動時に、氏名やメールアドレスを伴わない<strong>匿名ユーザーID</strong>が自動的に作成されます。</p>
+            <p>ランキングへ参加するためにユーザー名を設定した場合、次の情報を匿名ユーザーIDと関連付けてFirebaseへ保存します。</p>
             <ul>
-                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google のプライバシーポリシー</a></li>
-                <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">広告のパーソナライズ設定 / Google による情報利用</a></li>
+                <li>ユーザーが任意に設定する公開表示名（16文字以内）</li>
+                <li>到達階層、選択中の称号・外見、およびランキングの計算・運営に必要なゲームプレイ指標</li>
+                <li>総合・週間ランキングの更新日時</li>
+                <li>ランキング項目を通報した場合の、通報対象と通報者の匿名ユーザーIDおよび送信日時</li>
+            </ul>
+            <p>公開ランキングには、表示名、順位、到達階層、選択した称号・外見が表示される場合があります。内部の匿名ユーザーIDは公開表示名として表示しません。これらの情報はランキング機能の提供、週間報酬の判定、サービス運営上の分析および安全管理に利用します。他社のアプリやWebサイトをまたぐトラッキングには利用しません。</p>
+
+            <h2>4. 広告配信で処理される可能性があるデータ</h2>
+            <p>本アプリは、無料提供のためGoogle AdMob（Google Mobile Ads SDK）を利用した<strong>任意のリワード広告</strong>を表示します。無料ユーザー向けに広告を準備するため、広告を実際に視聴しない場合でもSDKが初期化され、端末・地域・同意状態・SDK設定に応じて、次のデータをGoogleへ送信する場合があります。</p>
+            <ul>
+                <li>IPアドレス、およびIPアドレスから推定されるおおよその位置情報</li>
+                <li>デバイスIDや広告識別子などの識別子</li>
+                <li>広告データ、および広告やアプリ内機能への操作情報</li>
+                <li>クラッシュデータ、パフォーマンスデータ、その他の診断データ</li>
+                <li>同意状態およびプライバシー選択に関する情報</li>
+            </ul>
+            <p>これらは、サードパーティ広告、当方の広告またはマーケティング、分析、アプリ・広告機能の提供、不正利用防止および障害診断のために処理される場合があります。データの種類により、端末・アプリ識別子と関連付けられる場合があります。</p>
+
+            <h2>5. トラッキングの許可（App Tracking Transparency）</h2>
+            <p>iOSでは、より関連性の高い広告を表示する目的で、App Tracking Transparency（ATT）によるトラッキングの許可を求める場合があります。許可した場合、デバイスIDが他社のアプリやWebサイトをまたぐトラッキングに利用される場合があります。</p>
+            <p>許可は任意であり、<strong>許可しない場合でも本アプリは通常どおり利用できます</strong>。許可しない場合、広告識別子（IDFA）へのアクセスは許可されませんが、広告配信、集計、不正防止などに必要なすべてのデータ処理がなくなるとは限りません。許可状態は、端末の「設定 &gt; プライバシーとセキュリティ &gt; トラッキング」から変更できます。</p>
+
+            <h2>6. アプリ内購入</h2>
+            <p>広告スキップパスの購入と復元はAppleのStoreKitを通じて処理されます。当方は、氏名、支払カード情報などの決済情報を取得しません。本アプリは購入資格を確認して端末内に利用状態を保存しますが、購入レシートを当方独自のサーバーへ送信しません。Appleによるデータの取り扱いはAppleのプライバシーポリシーに従います。</p>
+
+            <h2>7. 外部サービス</h2>
+            <p>本アプリで利用する外部サービスと、そのプライバシー情報は次のとおりです。</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">Google プライバシーポリシー</a></li>
+                <li><a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener noreferrer">Googleのサービスを使用するアプリから収集した情報の利用</a></li>
+                <li><a href="https://firebase.google.com/support/privacy?hl=ja" target="_blank" rel="noopener noreferrer">Firebaseのプライバシーとセキュリティ</a></li>
+                <li><a href="https://www.apple.com/legal/privacy/jp/" target="_blank" rel="noopener noreferrer">Apple プライバシーポリシー</a></li>
+            </ul>
+            <p>当方は、本アプリで利用する第三者サービスが、本ポリシーおよびApp Store Review Guidelinesで求められる水準と同等以上のデータ保護を提供することを確認し、必要な契約、設定および監督を行います。</p>
+
+            <h2>8. 保存期間と削除</h2>
+            <p>ランキングアカウントと関連データを削除する一次の方法は、アプリ内の「<strong>ランキングアカウントと関連データを削除</strong>」です。この操作を実行すると、現在のFirebase匿名認証アカウント、総合ランキングのスコア（total score）、すべての週の週間ランキングスコア、本人が作成した通報、および端末内のランキング用ローカルキーが削除されます。削除したランキングデータは元に戻せず、ランキングを再び利用すると新しい匿名アカウントが作成されます。</p>
+            <p>このランキング削除操作では、端末内のゲームセーブデータおよびAppleが管理するアプリ内購入の購入履歴・購入資格は削除されません。端末内のゲームセーブデータは、本アプリを削除（アンインストール）すると消去されます。アプリ内購入は、必要に応じてアプリ内の「購入を復元」から復元できます。</p>
+            <p>アプリを削除しただけでは、Firebase上のランキングアカウントと関連データが自動的に削除されない場合があります。アプリ内の削除操作を利用できない場合、または削除が完了しない場合は、公開表示名、概算の到達階層など記録の特定に必要な情報を添えて、<a href="mailto:nocs.information@gmail.com">nocs.information@gmail.com</a>へご連絡ください。本人の記録であることを確認するため、追加情報をお願いする場合があります。</p>
+            <p>Googleの広告・診断関連データおよびAppleの購入関連データの保存期間と削除方法は、各サービスの設定とポリシーに従います。</p>
+
+            <h2>9. ユーザーによる管理</h2>
+            <ul>
+                <li>ランキングへのスコア送信は、ユーザーが公開表示名を設定した後に行われます。表示名はアプリ内で変更できます。</li>
+                <li>他のユーザーのランキング項目は、アプリ内の通報・非表示操作を利用できます。</li>
+                <li>ATTの許可状態はiOSの設定から変更できます。</li>
+                <li>Googleによる広告情報の利用は、<a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google広告設定</a>などから管理できます。</li>
             </ul>
 
-            <h2>4. トラッキングの許可（App Tracking Transparency）</h2>
-            <p>iOS では、よりお客様に合った広告を表示する目的で、トラッキングの許可（ATT）を求める場合があります。許可は任意であり、<strong>許可しない場合でも本アプリは通常どおりご利用いただけます</strong>（パーソナライズされていない広告が表示されることがあります）。</p>
-            <p>トラッキングの許可状態は、端末の「設定 > プライバシーとセキュリティ > トラッキング」からいつでも変更できます。</p>
+            <h2>10. 子どものプライバシー</h2>
+            <p>本アプリは特定の年齢層を対象に個人情報を収集するものではありません。お子様が利用する場合は保護者の管理のもとでご利用ください。公開表示名には、本人や第三者を特定できる氏名・連絡先などを入力しないでください。</p>
 
-            <h2>5. 子どものプライバシー</h2>
-            <p>本アプリは特定の年齢層を対象に個人情報を収集するものではありません。お子様が利用する場合は保護者の管理のもとでご利用ください。</p>
+            <h2>11. 本ポリシーの変更</h2>
+            <p>本ポリシーは、機能、SDK、法令またはサービス仕様の変更に応じて改定する場合があります。変更後の内容と更新日は本ページに掲載します。</p>
 
-            <h2>6. データの削除</h2>
-            <p>セーブデータは端末内に保存されます。本アプリを削除（アンインストール）することで、端末内のデータは消去されます。</p>
-
-            <h2>7. 本ポリシーの変更</h2>
-            <p>本ポリシーは必要に応じて改定されることがあります。重要な変更がある場合は、本ページ上で告知します。</p>
-
-            <h2>8. お問い合わせ</h2>
-            <p>本ポリシーに関するお問い合わせは、上記「1. 運営者」記載の連絡先までお願いいたします。</p>
+            <h2>12. お問い合わせ</h2>
+            <p>本ポリシーまたはデータ削除に関するお問い合わせは、<a href="mailto:nocs.information@gmail.com">nocs.information@gmail.com</a>までお願いいたします。</p>
 
             <div class="english-summary">
                 <h3>English (summary)</h3>
-                <p>This app ("Idle Dungeon Quest") does not require an account and does not collect personally identifying information on our own servers. Your game save data is stored only on your device.</p>
-                <p>To keep the app free, we show <strong>rewarded video ads via Google AdMob</strong>. Watching ads is optional. Google/AdMob may collect device and advertising identifiers and ad-interaction data to serve ads, in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's policies</a>. On iOS we may request App Tracking Transparency (ATT) permission; declining does not affect gameplay. Uninstalling the app removes local data.</p>
+                <p>This app ("Idle Dungeon Quest") does not require registration with a name, email address, or password. Most game-save data stays on the device. For global and weekly leaderboards, Firebase automatically creates an anonymous user ID. If the player chooses a public display name, the app stores that name, leaderboard gameplay data, selected titles/cosmetics, timestamps, and report records in Cloud Firestore linked to the anonymous ID.</p>
+                <p>To keep the app free, we use <strong>Google AdMob for optional rewarded ads</strong>. The SDK may process coarse location, device identifiers, advertising data, product interaction, crash data, performance data, and other diagnostics for advertising, marketing, analytics, app functionality, fraud prevention, and diagnostics. If the player grants ATT permission, a device identifier may be used for tracking across other companies' apps or websites. Declining ATT does not block gameplay.</p>
+                <p>The primary way to delete a leaderboard account and related data is the in-app <strong>“Delete Leaderboard Account and Related Data”</strong> action. It deletes the current Firebase anonymous Authentication account, the total score used for the global leaderboard, weekly-score records for every week, reports created by that user, and device-local leaderboard keys. Deleted leaderboard data cannot be restored; using the leaderboard again creates a new anonymous account.</p>
+                <p>This leaderboard deletion does not delete the on-device game save or Apple-managed in-app purchase history or entitlement. Uninstalling the app erases the on-device game save. An eligible purchase can be restored with “Restore Purchases.” Uninstalling alone may not delete the Firebase data; if the in-app action is unavailable or does not complete, contact us with the public display name and approximate depth so we can help identify the record.</p>
                 <p>Contact: <strong>nocs.information@gmail.com</strong></p>
             </div>
 
             <div class="last-updated">
-                <p>最終更新日: 2026年6月17日</p>
+                <p>最終更新日: 2026年9月2日</p>
                 <p><a href="terms-of-service.html">利用規約</a> | <a href="../idle-dot-hero-detail.html">アプリ詳細</a></p>
             </div>
         </div>
