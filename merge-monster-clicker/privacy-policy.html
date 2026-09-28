@@ -174,8 +174,8 @@
             <p>NoCS（以下「当方」）は、iOSアプリ「配合モンスタークリッカー」（以下「本アプリ」）におけるデータの取り扱いを、次のとおり説明します。</p>
 
             <h2>1. アカウントとユーザー情報</h2>
-            <p>本アプリは、アカウント登録やログインを必要としません。氏名、メールアドレス、電話番号、正確な位置情報、連絡先、写真、カメラまたはマイクのデータを、当方が独自に収集する機能はありません。</p>
-            <p>本公開版は、オンラインランキング、Firebaseその他の当方サーバーに接続してゲームの進行状況を送信する機能を使用していません。</p>
+            <p>本アプリは、メールアドレスやパスワードによるアカウント登録またはログインを必要としません。氏名、メールアドレス、電話番号、正確な位置情報、連絡先、写真、カメラまたはマイクのデータを、当方が独自に収集する機能はありません。</p>
+            <p>オンラインのランク対戦を利用すると、当方のシステムがランク対戦専用の匿名プロフィールと認証情報を生成します。この匿名プロフィールは、ユーザーが入力する表示名、対戦用チームおよび戦績と関連付けられますが、氏名やメールアドレスによる本人確認には使用しません。</p>
 
             <h2>2. 端末内に保存するデータ</h2>
             <p>本アプリは、次の情報をユーザーの端末内に保存します。</p>
@@ -185,9 +185,22 @@
                 <li>広告スキップパスの利用状態を起動直後にも反映するための端末内キャッシュ</li>
                 <li>配合ラボPASSの利用資格を起動直後にも反映するための端末内キャッシュ（現在の状態、最後に有効と確認した状態、最終確認日時および有効期限）</li>
             </ul>
-            <p>これらのデータは当方のサーバーへ送信しません。ゲームの進行状況と設定は、アプリ内の「データを初期化」または本アプリの削除により端末から削除できます。一方、購入権利の誤った喪失を防ぐため、広告スキップパスと配合ラボPASSの利用資格キャッシュは「データを初期化」では削除せず、本アプリを端末から削除するまで保持します。</p>
+            <p>端末内の本編セーブ全体、ゲーム内通貨、購入権利、広告同意、詳細な図鑑および全所持数を、当方のランク対戦サーバーへ送信しません。ただし、オンラインのランク対戦を利用した場合は、第3項に記載する限定された情報を送信します。ゲームの進行状況と設定は、アプリ内の「データを初期化」または本アプリの削除により端末から削除できます。一方、購入権利の誤った喪失を防ぐため、広告スキップパスと配合ラボPASSの利用資格キャッシュは「データを初期化」では削除せず、本アプリを端末から削除するまで保持します。</p>
 
-            <h2>3. 広告配信と同意管理</h2>
+            <h2>3. オンラインのランク対戦</h2>
+            <p>本アプリのランク対戦は、当方がCloudflare WorkersおよびD1上で運用するサーバーへ接続します。ランク対戦の提供、ランキング表示、マッチング、対戦結果の整合性維持、不正利用の防止、通報・非表示、障害対応およびデータ削除のため、次の情報を処理します。</p>
+            <ul>
+                <li>サーバーが生成する匿名プレイヤーID、非公開のマッチング用識別子および認証情報（サーバーでは認証情報のハッシュを保存）</li>
+                <li>ユーザーが設定する表示名、現在および最高のランクポイント、階級、シーズン情報</li>
+                <li>公開する防衛チームのモンスター区分3件、戦術、対戦エンジンのバージョン</li>
+                <li>対戦相手、勝敗、ポイント変動、直近の対戦結果、リプレイに必要な情報、通報・非表示の対象</li>
+                <li>処理の重複を防ぐためのリクエストID、処理時刻および日次利用回数</li>
+                <li>登録時にアプリが生成するランク専用のランダムなインストールIDと、接続元IPアドレスまたはIPv6ネットワーク情報。サーバーにはこれらの生値を保存せず、日ごとに変わる不正防止用HMACのみを保存します。</li>
+            </ul>
+            <p>公開ランキングには、表示名、ランクポイント、階級および公開防衛チームが表示されます。最高到達値や直近の対戦結果などの詳細は、当該匿名プロフィールの認証情報を持つ端末だけに返します。ランク対戦で、端末内の本編セーブ全体、購入権利、広告設定、氏名、メールアドレスまたは正確な位置情報を送信しません。</p>
+            <p>ランク画面の「対戦プロフィールを削除」から、サーバー上の現在の匿名プロフィールを削除できます。削除すると、認証情報のハッシュ、現在のチーム、匿名プレイヤーIDと非公開識別子の対応が削除され、残る処理記録は直ちに当該プロフィールへ再結合できない状態になります。重複処理防止、ポイント整合性および不正防止に必要な匿名化済み記録は、第9項の期間に限って保持した後に削除します。削除後に再参加する場合は、ランク画面で明示的に新しく参加する操作が必要です。</p>
+
+            <h2>4. 広告配信と同意管理</h2>
             <p>本アプリは、ユーザーが報酬を受け取るために自ら選択した場合に、Google AdMob（Google Mobile Ads SDK）のリワード動画広告を表示します。強制的に表示する広告はありません。また、地域に応じた広告の同意確認のため、Google User Messaging Platform（UMP）を使用します。</p>
             <p>GoogleのSDKは、端末、地域、同意状態、ATTの状態およびSDK設定に応じて、次のデータを自動的に収集し、Googleへ送信する場合があります。</p>
             <ul>
@@ -200,16 +213,16 @@
             </ul>
             <p>これらのデータは、広告の配信・パーソナライズ、配信結果の測定、利用状況の集計・分析、不正防止、セキュリティ、障害診断およびサービス改善に使用される場合があります。実際に処理されるデータは、ユーザーの選択とGoogleの仕様により異なります。</p>
 
-            <h2>4. UMPとApp Tracking Transparency（ATT）</h2>
+            <h2>5. UMPとApp Tracking Transparency（ATT）</h2>
             <p>UMPが同意確認を必要と判断した場合、本アプリはリワード広告を読み込む前にGoogleの同意画面を表示します。</p>
             <p>iOSでは、広告識別子を利用したトラッキングについて、App Tracking Transparency（ATT）の許可を求めます。許可は任意であり、許可しない場合でもゲームの機能と進行は通常どおり利用できます。許可しない場合、IDFAは広告SDKへ提供されませんが、広告の配信、集計、不正防止などのために、Googleが同意状態に応じたその他のデータを処理する場合があります。</p>
             <p>ATTの選択は、端末の「設定 &gt; プライバシーとセキュリティ &gt; トラッキング」から変更できます。</p>
 
-            <h2>5. 広告スキップパス（アプリ内課金）</h2>
+            <h2>6. 広告スキップパス（アプリ内課金）</h2>
             <p>本アプリは、広告を視聴せずに同じゲーム内報酬を受け取れる買い切り型の「広告スキップパス」を提供します。購入、購入履歴の照会、復元および取引の完了にはAppleのStoreKitを使用します。</p>
             <p>商品識別子、購入状態および取引に必要な情報はAppleにより処理される場合があります。当方は、クレジットカード番号その他の支払情報を取得または保存しません。購入履歴の保存期間と管理は、Appleのサービスおよびポリシーに従います。</p>
 
-            <h2>6. 配合ラボPASS（自動更新サブスクリプション）</h2>
+            <h2>7. 配合ラボPASS（自動更新サブスクリプション）</h2>
             <p>本アプリは、配合に関する追加機能を利用できる月額自動更新サブスクリプション「配合ラボPASS」（商品識別子: jp.nocs.mergemonster.labpass.monthly）を提供します。配合ラボPASS単独では広告は削除されず、買い切り型の広告スキップパスとは別の商品です。利用期間が終了した場合も、それまでに取得したモンスターおよび配合履歴は削除しません。</p>
             <p>商品情報の取得、購入、復元、有効なサブスクリプションの照合および取引記録の管理にはAppleのStoreKitを使用し、これらの処理はAppleが行います。当方は、クレジットカード番号その他の支払情報を取得または保存しません。購入履歴およびStoreKitの取引記録の保存期間は、Appleのサービスおよびポリシーに従います。</p>
             <p>本アプリは、購入状態を安定して反映し、通信できない場合の誤った権利喪失を防ぐため、配合ラボPASSの利用資格に関する次の情報を端末内に保存します。</p>
@@ -222,34 +235,37 @@
             <p>この利用資格キャッシュは当方のサーバーへ送信せず、第三者へ提供しません。端末内に保存され、アプリ内の「データを初期化」では削除されず、本アプリを端末から削除するまで保持されます。Appleは購入・復元・利用資格照合に必要な情報を、Appleのポリシーに従って処理・保管します。</p>
             <p>ユーザーは、本アプリ内で購入を復元できます。サブスクリプションの確認、変更または解約は、Apple IDのサブスクリプション管理画面から行えます。本アプリを端末から削除すると端末内の利用資格キャッシュは削除されますが、Apple側の購入・サブスクリプション記録は削除されません。再インストール後は、本アプリ内の購入復元またはAppleへの再照合により利用資格を反映できます。当方はApple側の取引記録を削除できず、契約の解約はApple IDの設定から行う必要があります。</p>
 
-            <h2>7. 外部サービス</h2>
+            <h2>8. 外部サービス</h2>
             <p>第三者サービスによるデータの取り扱いについては、次のページをご確認ください。</p>
             <ul>
                 <li><a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">Google プライバシーポリシー</a></li>
                 <li><a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener noreferrer">Googleのサービスを使用するアプリから収集した情報の利用</a></li>
                 <li><a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google 広告設定</a></li>
                 <li><a href="https://www.apple.com/jp/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple プライバシーポリシー</a></li>
+                <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare プライバシーポリシー</a></li>
             </ul>
 
-            <h2>8. 保存期間と削除</h2>
-            <p>ゲームデータと設定は、ユーザーがアプリ内で初期化するか、本アプリを削除するまで端末内に保持されます。当方のサーバーにはその複製を保存しません。</p>
+            <h2>9. 保存期間と削除</h2>
+            <p>端末内のゲームデータと設定は、ユーザーがアプリ内で初期化するか、本アプリを削除するまで保持されます。当方のランク対戦サーバーには本編セーブ全体の複製を保存しません。</p>
+            <p>ランク対戦の現在の匿名プロフィールは、ユーザーがランク画面から削除するまで保持します。対戦チームおよび対戦処理の詳細記録は原則90日以内かつプロフィールごとの件数上限まで保持し、その後は重複処理防止に必要な簡略記録へ置き換えます。簡略記録と匿名化済みの通報記録は最大365日、認証情報を端末へ保存できず対戦にも使用されなかった到達不能プロフィールは原則7日、日次の不正防止用HMACと前日分の日次制限記録は翌日以降の定期削除まで保持します。プロフィール削除後に残る有期の匿名化済み記録には、認証情報、認証情報のハッシュ、匿名プレイヤーID、現在プロフィールへの対応、端末内セーブ、購入権利または広告選択を保持しません。</p>
             <p>広告、診断および同意関連データの保存期間と削除方法は、Googleのサービス、ユーザーの選択およびGoogleのポリシーに従います。購入履歴とStoreKitの取引記録は、Apple IDとAppleのサービス上で管理されます。広告スキップパスおよび配合ラボPASSの端末内キャッシュは、アプリ内の「データを初期化」では削除されず、本アプリを端末から削除するまで保持されます。本アプリの削除後もApple側の取引記録は残り、当方がその記録を削除することはできません。</p>
 
-            <h2>9. お子さまの利用</h2>
+            <h2>10. お子さまの利用</h2>
             <p>本アプリは、お子さまを対象として個人情報を収集するように設計していません。広告SDKに伴うデータ処理には、年齢、地域、端末設定および同意状態に応じたGoogleの取り扱いが適用される場合があります。</p>
 
-            <h2>10. セキュリティ</h2>
-            <p>端末内のゲームデータにはiOSとアプリが提供する保存機能を使用します。広告、同意管理およびアプリ内課金の通信には、Apple、Googleおよび各サービスが提供するセキュリティ機能を利用します。</p>
+            <h2>11. セキュリティ</h2>
+            <p>端末内のゲームデータにはiOSとアプリが提供する保存機能を使用します。ランク対戦、広告、同意管理およびアプリ内課金の通信には、HTTPSならびにCloudflare、Apple、Googleおよび各サービスが提供するセキュリティ機能を利用します。</p>
 
-            <h2>11. 本ポリシーの変更</h2>
+            <h2>12. 本ポリシーの変更</h2>
             <p>本ポリシーは、機能、SDK、法令またはサービス仕様の変更に応じて改定する場合があります。変更後の内容と更新日は本ページに掲載します。</p>
 
-            <h2>12. お問い合わせ</h2>
+            <h2>13. お問い合わせ</h2>
             <p>本ポリシーに関するお問い合わせ先:<br><a href="mailto:nocs.information@gmail.com">nocs.information@gmail.com</a></p>
 
             <div class="english-summary">
                 <h2>English summary</h2>
-                <p>This app does not require an account. Game progress and settings are stored locally on the device and are not uploaded to our servers. The released app does not use online rankings or Firebase connectivity.</p>
+                <p>This app does not require an email/password account. Core save data remains on the device. If you use online Rank Battle, the app connects to our Cloudflare Workers/D1 service and creates a pseudonymous battle profile. We process a server-generated player ID, a user-chosen display name, rank points and tier, a three-slot public defense team and tactic, match results, request IDs, timestamps, reports/blocks, and limited anti-abuse data. The public leaderboard shows the display name, rank points, tier and defense team. The full local save, purchase entitlements and advertising choices are not uploaded to the Rank Battle service.</p>
+                <p>You can delete the live battle profile from the Rank screen. This removes the live identity mapping and credentials. Unlinked pseudonymous receipts needed for idempotency, rank integrity and abuse prevention are retained for bounded periods: full receipts generally up to 90 days, compact receipts and reports up to 365 days, unused unreachable registrations generally 7 days, and daily anti-abuse HMACs until the next scheduled cleanup.</p>
                 <p>Optional rewarded video ads are provided through Google AdMob, with Google UMP used where consent is required. Google may process identifiers, approximate location, ad interaction, product interaction, performance, diagnostic and consent data depending on your region and choices. On iOS, the app requests App Tracking Transparency permission; declining does not restrict gameplay.</p>
                 <p>A non-consumable ad-skip purchase is processed by Apple StoreKit. We do not receive or store payment card details. Contact: <strong>nocs.information@gmail.com</strong></p>
                 <p>The monthly auto-renewable subscription “Breeding Lab PASS” is separate from the ad-skip purchase and does not remove ads by itself. Apple processes purchases, restores, subscription verification and transaction records through StoreKit. Local entitlement caches for the ad-skip purchase and Breeding Lab PASS are stored only on the device and are not sent to our servers. They are not removed by the in-app game-data reset and remain until the app is uninstalled. Uninstalling removes the local caches but does not erase Apple’s purchase or subscription records. After reinstalling, entitlements can be restored or reverified through Apple. We cannot delete Apple’s transaction records; subscription management and cancellation are handled through Apple ID settings.</p>
