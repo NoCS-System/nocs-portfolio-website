@@ -185,7 +185,7 @@
                 <li>広告スキップパスの利用状態を起動直後にも反映するための端末内キャッシュ</li>
                 <li>配合ラボPASSの利用資格を起動直後にも反映するための端末内キャッシュ（現在の状態、最後に有効と確認した状態、最終確認日時および有効期限）</li>
             </ul>
-            <p>これらのゲームデータは当方のサーバーへ送信しません。アプリ内の「データを初期化」または本アプリの削除により、端末内のゲームデータを削除できます。</p>
+            <p>これらのデータは当方のサーバーへ送信しません。ゲームの進行状況と設定は、アプリ内の「データを初期化」または本アプリの削除により端末から削除できます。一方、購入権利の誤った喪失を防ぐため、広告スキップパスと配合ラボPASSの利用資格キャッシュは「データを初期化」では削除せず、本アプリを端末から削除するまで保持します。</p>
 
             <h2>3. 広告配信と同意管理</h2>
             <p>本アプリは、ユーザーが報酬を受け取るために自ら選択した場合に、Google AdMob（Google Mobile Ads SDK）のリワード動画広告を表示します。強制的に表示する広告はありません。また、地域に応じた広告の同意確認のため、Google User Messaging Platform（UMP）を使用します。</p>
@@ -219,8 +219,8 @@
                 <li>Appleへの最終確認日時（lastVerifiedAt）</li>
                 <li>確認できた有効期限（activeUntil）</li>
             </ul>
-            <p>この利用資格キャッシュは当方のサーバーへ送信せず、第三者へ提供しません。端末内に保存され、アプリ内のデータ削除操作または本アプリの削除まで保持されます。Appleは購入・復元・利用資格照合に必要な情報を、Appleのポリシーに従って処理・保管します。</p>
-            <p>ユーザーは、本アプリ内で購入を復元できます。サブスクリプションの確認、変更または解約は、Apple IDのサブスクリプション管理画面から行えます。端末内の利用資格キャッシュは、アプリ内のデータ削除操作または本アプリの削除により削除できます。キャッシュを削除してもApple側の契約は解約されないため、契約の解約はApple IDの設定から別途行ってください。</p>
+            <p>この利用資格キャッシュは当方のサーバーへ送信せず、第三者へ提供しません。端末内に保存され、アプリ内の「データを初期化」では削除されず、本アプリを端末から削除するまで保持されます。Appleは購入・復元・利用資格照合に必要な情報を、Appleのポリシーに従って処理・保管します。</p>
+            <p>ユーザーは、本アプリ内で購入を復元できます。サブスクリプションの確認、変更または解約は、Apple IDのサブスクリプション管理画面から行えます。本アプリを端末から削除すると端末内の利用資格キャッシュは削除されますが、Apple側の購入・サブスクリプション記録は削除されません。再インストール後は、本アプリ内の購入復元またはAppleへの再照合により利用資格を反映できます。当方はApple側の取引記録を削除できず、契約の解約はApple IDの設定から行う必要があります。</p>
 
             <h2>7. 外部サービス</h2>
             <p>第三者サービスによるデータの取り扱いについては、次のページをご確認ください。</p>
@@ -233,7 +233,7 @@
 
             <h2>8. 保存期間と削除</h2>
             <p>ゲームデータと設定は、ユーザーがアプリ内で初期化するか、本アプリを削除するまで端末内に保持されます。当方のサーバーにはその複製を保存しません。</p>
-            <p>広告、診断および同意関連データの保存期間と削除方法は、Googleのサービス、ユーザーの選択およびGoogleのポリシーに従います。購入履歴とStoreKitの取引記録は、Apple IDとAppleのサービス上で管理されます。広告スキップパスおよび配合ラボPASSの端末内キャッシュは、アプリ内のデータ削除操作または本アプリの削除まで保持されます。</p>
+            <p>広告、診断および同意関連データの保存期間と削除方法は、Googleのサービス、ユーザーの選択およびGoogleのポリシーに従います。購入履歴とStoreKitの取引記録は、Apple IDとAppleのサービス上で管理されます。広告スキップパスおよび配合ラボPASSの端末内キャッシュは、アプリ内の「データを初期化」では削除されず、本アプリを端末から削除するまで保持されます。本アプリの削除後もApple側の取引記録は残り、当方がその記録を削除することはできません。</p>
 
             <h2>9. お子さまの利用</h2>
             <p>本アプリは、お子さまを対象として個人情報を収集するように設計していません。広告SDKに伴うデータ処理には、年齢、地域、端末設定および同意状態に応じたGoogleの取り扱いが適用される場合があります。</p>
@@ -252,7 +252,7 @@
                 <p>This app does not require an account. Game progress and settings are stored locally on the device and are not uploaded to our servers. The released app does not use online rankings or Firebase connectivity.</p>
                 <p>Optional rewarded video ads are provided through Google AdMob, with Google UMP used where consent is required. Google may process identifiers, approximate location, ad interaction, product interaction, performance, diagnostic and consent data depending on your region and choices. On iOS, the app requests App Tracking Transparency permission; declining does not restrict gameplay.</p>
                 <p>A non-consumable ad-skip purchase is processed by Apple StoreKit. We do not receive or store payment card details. Contact: <strong>nocs.information@gmail.com</strong></p>
-                <p>The monthly auto-renewable subscription “Breeding Lab PASS” is separate from the ad-skip purchase and does not remove ads by itself. Apple processes purchases, restores, subscription verification and transaction records through StoreKit. A limited entitlement cache (status, last known active state, verification time and active-until date) is stored only on the device and is not sent to our servers. It remains until in-app data deletion or app removal. Subscription management and cancellation are handled through Apple ID settings.</p>
+                <p>The monthly auto-renewable subscription “Breeding Lab PASS” is separate from the ad-skip purchase and does not remove ads by itself. Apple processes purchases, restores, subscription verification and transaction records through StoreKit. Local entitlement caches for the ad-skip purchase and Breeding Lab PASS are stored only on the device and are not sent to our servers. They are not removed by the in-app game-data reset and remain until the app is uninstalled. Uninstalling removes the local caches but does not erase Apple’s purchase or subscription records. After reinstalling, entitlements can be restored or reverified through Apple. We cannot delete Apple’s transaction records; subscription management and cancellation are handled through Apple ID settings.</p>
             </div>
 
             <div class="last-updated">
