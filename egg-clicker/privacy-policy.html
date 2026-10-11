@@ -167,14 +167,14 @@
         <div class="policy-header">
             <h1>プライバシーポリシー</h1>
             <p>卵クリッカー</p>
-            <p>最終更新日: 2026年9月2日</p>
+            <p>最終更新日: 2026年10月11日</p>
         </div>
 
         <div class="policy-content">
             <p>NoCS System（以下「当方」）は、iOSアプリ「卵クリッカー」（以下「本アプリ」）におけるデータの取り扱いを、次のとおり説明します。</p>
 
             <h2>1. アカウントとユーザーが入力する情報</h2>
-            <p>本アプリは、メールアドレスやパスワードによる登録を求めません。オンライン機能を利用する際、その機能を安全に提供するため、Firebase Authenticationで匿名のユーザーIDを自動的に発行します。このIDは、ランキングと世界ボスの記録を同じ利用者に対応付けるために使用します。</p>
+            <p>本アプリは、メールアドレスやパスワードによる登録を求めません。オンライン機能を利用する際、その機能を安全に提供するため、Firebase Authenticationで匿名のユーザーIDを自動的に発行します。このIDは、ランキングと世界ボスの記録を同じ利用者に対応付け、チケット購入機能の通信を認証するために使用します。</p>
             <p>ランキングに参加する場合、ユーザーは公開用の表示名を入力できます。氏名、住所、電話番号、連絡先、写真、カメラ、マイクまたは正確な位置情報を、ゲーム機能のために当方が入力させる機能はありません。お問い合わせ時には、返信に必要な範囲でユーザーが任意に提供した情報を取り扱います。</p>
 
             <h2>2. ランキング</h2>
@@ -207,7 +207,7 @@
                 <li>広告スキップパスの利用状態を起動直後にも反映するための端末内キャッシュ</li>
                 <li>オンボーディングの完了、初回起動時刻、レビュー案内の表示済み状態、他アプリ紹介リンクの利用回数</li>
             </ul>
-            <p>通常のゲーム進行は端末内に保存しますが、前記のランキング情報と世界ボス情報はオンライン機能のため送信されます。</p>
+            <p>通常のゲーム進行は端末内に保存しますが、ランキング・世界ボス・購入チケットに関する情報は、それぞれのオンライン機能のため送信されます。</p>
 
             <h2>5. 広告配信と同意管理</h2>
             <p>本アプリは、ユーザーが報酬を受け取るために自ら選択した場合に、Google AdMob（Google Mobile Ads SDK）のリワード動画広告を表示します。地域に応じた広告の同意確認にはGoogle User Messaging Platform（UMP）を使用します。</p>
@@ -229,6 +229,16 @@
             <h2>7. 広告スキップパス（アプリ内課金）</h2>
             <p>本アプリは、広告を視聴せずに対象のゲーム内報酬を受け取れる買い切り型の「広告スキップパス」を提供します。購入、購入履歴の照会、復元および取引の完了にはAppleのStoreKitを使用します。</p>
             <p>商品識別子、購入状態および取引に必要な情報はAppleにより処理される場合があります。当方は、クレジットカード番号その他の支払情報を取得または保存しません。購入履歴の保存期間と管理は、Appleのサービスおよびポリシーに従います。</p>
+
+            <h2>7-2. ガチャチケットと月額パック</h2>
+            <p>ガチャチケットの購入と月額パックにはApple StoreKitを使用します。チケットの付与・消費・復元を正しく扱い、二重付与を防ぐため、Appleが署名したアプリ・購入取引情報をCloudflare Workers上の当方サービスへ送信して検証します。</p>
+            <ul>
+                <li>アプリ単位のAppleアカウント識別子、購入時のアカウント関連付け識別子、商品・取引識別子、購入枚数、購入・有効期限・返金の情報</li>
+                <li>購入チケットの残高、付与・消費・返金調整の記録</li>
+                <li>購入チケットを含む抽選の要求ID、端末内ゲームを識別するID、抽選対象・回数・無料／購入チケットの内訳、天井カウント、確定結果と日時</li>
+            </ul>
+            <p>これらの記録は公開せず、購入権利の確認、再インストール・別端末での購入残高と抽選結果の復元、不正防止、障害回復のために使用します。Appleアカウントのメールアドレスやパスワード、支払カード情報は取得しません。無料チケットのみの抽選や通常のゲーム進行をすべてサーバーへ保存する機能ではありません。</p>
+            <p>有料残高・取引・抽選の記録には、復元と重複付与防止のため自動削除期限を設けていません。アプリを削除してもサーバー上の購入残高と記録は削除されません。開発環境と本番環境の残高は別に管理します。これらの情報へのアクセス・訂正・削除についても下記の窓口へご連絡ください。重複付与防止または返金処理のため、必要最小限の取引記録を保持する場合があります。</p>
 
             <h2>8. 利用する外部サービス</h2>
             <p>第三者サービスによるデータの取り扱いについては、次のページをご確認ください。</p>
@@ -268,12 +278,12 @@
                 <h2>English summary</h2>
                 <p>The app creates an anonymous Firebase user ID for online features. If you join the rankings, it stores your chosen display name, weekly hatch score, tap-power score, anonymous ID, and update time in Cloud Firestore. These ranking records are publicly readable; the app UI normally renders only display names, scores, and ranks.</p>
                 <p>The World Boss feature sends Firebase authentication and App Check tokens to our service hosted on Cloudflare Workers. The service processes an anonymous player ID, event and attempt identifiers, attempt timing and count, damage, display name, contribution rank, and reward claim records. Contribution data is shared with other users.</p>
-                <p>Game progress and settings are also stored locally. Optional rewarded ads use Google AdMob and UMP, and iOS App Tracking Transparency permission is requested before AdMob initialization. A non-consumable ad-skip purchase is processed by Apple StoreKit. We do not receive payment-card details.</p>
+                <p>Game progress and settings are also stored locally. Optional rewarded ads use Google AdMob and UMP, and iOS App Tracking Transparency permission is requested before AdMob initialization. Apple StoreKit processes ad-skip purchases, consumable gacha tickets, and monthly ticket subscriptions. Our Cloudflare service verifies signed Apple app and purchase transactions and stores app-scoped account identifiers, transaction details, paid balances, refund adjustments, and purchased draw requests and results for delivery, recovery, and prevention of duplicate credit. Paid records are private, persist after uninstall, and currently have no automatic expiry. We do not receive Apple account passwords or payment-card details.</p>
                 <p>Deleting the app normally removes data stored in the app's local AsyncStorage area. It does not automatically delete the anonymous Firebase user, server-side rankings, World Boss records, or Apple purchase history. The app has no in-app server-data deletion control and no automatic expiry is currently configured for those Firebase and World Boss records. To request access to or deletion of data held by us, contact <strong>nocs.information@gmail.com</strong>.</p>
             </div>
 
             <div class="last-updated">
-                <p>制定日: 2025年11月17日 / 最終更新日: 2026年9月2日</p>
+                <p>制定日: 2025年11月17日 / 最終更新日: 2026年10月11日</p>
                 <p><a href="terms-of-service.html">利用規約</a> | <a href="../egg-clicker-detail.html">アプリ詳細</a></p>
             </div>
         </div>
